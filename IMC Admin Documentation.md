@@ -1,9 +1,9 @@
-# Overview
+# <u>Overview</u>
 
 
-IBM Mobile Capture is a platform which allows users to scan and capture data from a variety of documents. By simply using a mobile device, users can capture, edit, and upload the data in a repository of their choice in a matter of seconds.
+IBM Automation Mobile Capture is a platform which allows users to scan and capture data from a variety of documents. By simply using a mobile device, users can capture, edit, and upload the data in a repository of their choice in a matter of seconds.
 
-## Capabilities of IBM Mobile Capture
+## Capabilities of IBM Automation Mobile Capture
 
 - `Photo Capturing` - A feature that presentes the user with a simple camera screen which allows him/her to take a picture.
 
@@ -15,7 +15,7 @@ IBM Mobile Capture is a platform which allows users to scan and capture data fro
 
 - `Property editor` - This feature allows the user to visualize, edit and add data to any available Scenario properties.
 
-- `Offline Functionality` - By using this feature, the users can perform all major features of the platform, except the upload functionality, in an offline status.
+- `Offline functionality` - By using this feature, the users can perform all major features of the mobile apps, except the upload functionality, in an offline status.
 
 - `Smart capturing` - This feature consists of a set of functionalities designed to help users obtain the best possible image capture and data extraction.
 
@@ -23,19 +23,23 @@ IBM Mobile Capture is a platform which allows users to scan and capture data fro
 
 - `Smart filters` - An easy to use feature that grants users the abiity to apply a variety of filters to their captured images in order to improve image quality and OCR recognition.
 
+- `Data Provider` - This feature is meant to help users complete the extracted data from documents with additional data downloaded from an external service. 
+
+- `Scenario Deep Linking` - A functionality which allows the user to open the mobile app at any given scenario.
+
 ## Supported browsers for the Admin Console
 
-- Google Chrome
-- Safari
-- Mozilla Firefox
+- Apple Safari 11 (and later)
+- Google Chrome 62 (and later)
+- Microsoft Edge 40 (and later)
+- Firefox 68 ESR (and later)
 
-
-# Accessing and managing the Admin Console
+# 1. <u>Accessing and managing the Admin Console</u>
 
 
 ## About the Admin Console
 
-The Admin Console represents a Web browser-based, graphical user interface application that is used to manage an IBM Mobile Capture workspace by:
+The Admin Console represents a Web browser-based, graphical user interface application that is used to manage an IBM Automation Mobile Capture workspace by:
 
 - Creating and managing scenarios
 - Adding or removing external integrations
@@ -51,10 +55,15 @@ To begin using the Admin Console, start one of the supported Web browsers for yo
 
 You can use the **Remember me** checkbox for easier access in case of repeated workspace use.
 
-OBS: In case of a forgotten password, click the **Forgot your Password?** link and follow the indicated instructions to reset your password.
+OBS: When connected to an LDAP server, please insert valid credentials associated with said LDAP server.
+
+In case of a forgotten password, click the **Forgot your Password?** link and follow the indicated instructions to reset your password.
+
+OBS: When connected to an LDAP server, the reset password functionality needs to be performend and completed from within the LDAP server configuration.
 
 
-# Creating and managing scenarios
+
+# 2. <u>Creating and managing scenarios</u>
 
 
 ## What is a scenario?
@@ -73,7 +82,7 @@ OBS: Note that in order to create a new scenario, the scenario name field can no
 
 ## Configuring a Scenario
 
-A scenario is composed out of the following elements: `Scenario name`, `Scenario steps`, `Properties`, and `Uploads`.
+A scenario is composed out of the following elements: `Scenario name`, `Scenario Deep Linking`,`Scenario steps`, `Properties`, and `Uploads`.
 
 #### Scenario name
 
@@ -81,6 +90,10 @@ The name of a scenario can be set when creating the said scenario or by editing 
 
 - Access a scenario
 - Edit the **Name** field
+
+#### Scenario Deep Linking 
+
+A link situated under the Scenario name, which if copied and accessed from a mobile device with the IBM Automation Mobile Capture app installed, will open the app at the beginning of said scenario.
 
 #### Scenario steps
 
@@ -96,11 +109,11 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 
 ##### Type of steps:
 
-1) <u>_US Driver's License:_</u>  This step allows users to scan and capture data from a US Driver's License. Editing this step will enable users to precisely select what data parameters they wish to extract from the document. These parameters also represent the Scenario Properties in the IBM Mobile Capture platform.
+1) `US Driver's License:` This step allows users to scan and capture data from a US Driver's License. Editing this step will enable users to precisely select what data parameters they wish to extract from the document. These parameters also represent the Scenario Properties in the IBM Mobile Capture platform.
 
-2) <u>_Passport:_</u> This step allows users to scan and capture data from a Passport or a Machine Readable Travel Document. Editing this step will also enable users to select what data parameters they wish to extract from this type of documents.
+2) `Passport:` This step allows users to scan and capture data from a Passport or a Machine Readable Travel Document. Editing this step will also enable users to select what data parameters they wish to extract from this type of documents.
 
-3) <u>_Document:_</u> This step allows users to create a step for scanning a custom document and extracting data from custom fields. To do so:
+3) `Document:` This step allows users to create a step for scanning a custom document and extracting data from custom fields. To do so:
 
 - Click the **Edit** button
 - Click the **Choose a file** button to upload a copy of the document you would like to scan (in PNG or PDF format) and click **Upload**
@@ -108,7 +121,9 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 - Fill in the **Zones** field/s with their corresponding name. These Zones also represent the Scenario Properties of this step
 - Click the **Save** button
 
-4) <u>_Property Editor:_</u> This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. To do so:
+OBS: By editing this step, the user can select or unselect the import from device feature.
+
+4) `Property Editor:` This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. To do so:
 
 - Click the **Edit** button
 - Click the **Add Property** button
@@ -117,17 +132,23 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 
 OBS: For adding a custom property select the **New Property** option and customize its name.
 
-5)  <u>_Barcode:_</u> This step allows users the possibility of scanning a multitude of barcode formats.
+5)  `Barcode:` This step allows users the possibility of scanning a multitude of barcode formats.
 
 OBS: This step has no editing options.
 
-6)  <u>_Photo:_</u> This step allows users to take one or more photos as part of a scenario.
+6)  `Photo:` This step allows users to take one or more photos as part of a scenario.
 
-OBS: By editing this step, the user can select or unselect the Multi-Photo capture option
+OBS: By editing this step, the user can select or unselect the Multi-Photo capture option as well as the import from device feature.
 
-7)  <u>_Data Provider:_</u> This step is meant to support the use case of augmenting data with resort to an external data provider service. 
+7)  `Data Provider:` This step is meant to support the use case of augmenting data with resort to an external data provider service. To do so:
 
-8)  <u>_Upload:_</u> This is a mandatory step which allows users to select an additional repository for uploading the extracted data and images of a given scenario. To do so:
+- Click the **Edit** button
+- Fill in the **URL** of the external data provider service
+- Configure the **Request** properties
+- Configure the **Response** properties
+- Click the **Save** button
+
+8)  `Upload:` This is a mandatory step which allows users to select an additional repository for uploading the extracted data and images of a given scenario. To do so:
 
 - Click the **Edit** button
 - Click the **Connection** drop-down list
@@ -152,37 +173,40 @@ This scenario element shows a history of every upload. The user can see at a gla
 OBS: If the Upload Step is configured for uploading into an external repository (i.e DataCap or IBM navigator), the content of each upload will be accessible only inside said repository.
 
 
-# Inviting and managing users
+# 3. <u>Inviting and managing users</u>
 
 
 Click the **Team** button on the toolbar to access the team page. On this page, an administrator can invite and remove users, as well as managing their permissions.
 
 ## Inviting users
 
-From the Team page, Click the **Invite User** button. Insert the email address of the person that you would like to invite using the following format [_user@example.com_](mailto:user@example.com)_._ And click the **Send Invitation** button.
-
-OBS: Note that you can only invite one user at a time.
+From the Team page, Click the **Invite User** button. Insert the email address of the person that you would like to invite using the following format [_user@example.com_](mailto:user@example.com)_._ And click the **Send Invitation** button. Please note that you can only invite one user at a time.
 
 To remove a user, simply click the **Delete** button associated with the user and confirm the action in the dialog box.
+
+OBS: When connected to an LDAP server, this features will not be available. These actions need to be performend and completed from within the LDAP server configuration.
 
 ## Assigning user roles
 
 To assign a role to a user, click on the current role of a user and select a new one from the drop-down list.
 
+OBS: When connected to an LDAP server, this feature will not be available. This action needs to be performend and completed from within the LDAP server configuration.
+
 ## User roles and permissions
 
 | User Role | Permissions |
 | --- | --- |
-| App user | Users that can only login in the mobile app. |
-| Workspace User | Users that can login in the Admin Console and have permissions to create scenarios and connections. |
-| Workspace Admin | Users that can login in the Admin Console, invite people to teams as well as create scenarios and connections. |
-| Platform Admin | Users that can login in the Admin Console, invite people to teams as well as create scenarios, connections and workspaces. |
+| App user | Users that can only login in the mobile apps. |
+| Workspace User | Users that can login in the mobile apps as well as the Admin Console and have permissions to create scenarios and connections. |
+| Workspace Admin | Users that also have the privilege to invite people to teams as well as create scenarios and connections. |
+| Platform Admin | Users that also have the privilege to create new workspaces. |
+
+OBS: When connected to an LDAP server, only the App User and Workspace Admin roles will be available.
+
+# 4. <u>Integrations</u>
 
 
-# Integrations
-
-
-IBM Mobile Capture offers integrations with following file and data governance products
+IBM Mobile Capture offers integrations with following file and data governance products.
 
 ## IBM® Content Navigator Integration
 
@@ -212,24 +236,19 @@ How to set up an IBM® Datacap integration:
 
 
 
-##  Webhook integration
+# 5. <u>Creating and managing other workspaces</u>
 
-IBM Mobile Capture
-
-How to set up a Webhook integration:
-
-- Click on **Connections** button on the toolbar
-- Go to **New Connection** and select **Webhook**
-- Insert a Connection name and the additional webhook details
-- Click the **Save** button
-
-
-
-## Creating and managing other workspaces
-
-With IBM Mobile Capture, a Workspace Admin can create or delete different workspaces within the same platform. To create a new workspace:
+With IBM Automation Mobile Capture, a Platform Admin user can create or delete different workspaces within the same platform. To create a new workspace:
 
 - Click the Workspaces button on the toolbar
 - Click the **New Workspace** button
-- Insert the Account name and Owner's Email ([_user@example.com_](mailto:user@example.com)_._)
-- Click the Create Account button
+- Insert the Account name and Owner's Email ([_user@example.com_](mailto:user@example.com))_._
+- Click the **Create Account** button
+
+OBS: When connected to an LDAP server, this feature will not be available.
+
+# 6. <u>LDAP integration</u>
+
+IBM Automation Mobile Capture supports integration with an LDAP server. As of version 3.1.0, this feature can only be accessible via a Kubernets deployment. 
+
+
