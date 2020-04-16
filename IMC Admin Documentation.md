@@ -26,6 +26,8 @@ IBM Automation Mobile Capture is a platform which allows users to scan and captu
 - `Data Provider` - This feature is meant to help users complete the extracted data from documents with additional data downloaded from an external service. 
 
 - `Scenario Deep Linking` - A functionality which allows the user to open the mobile app at any given scenario.
+- `Smart Data Extraction` -  An implemention which allows the user to automatically extract data from a document using Machine Learning.
+
 
 ## Supported browsers for the Admin Console
 
@@ -131,6 +133,18 @@ OBS: By editing this step, the user can select or unselect the import from devic
 - Click the **Save** button
 
 OBS: For adding a custom property select the **New Property** option and customize its name.
+
+In this step, the user is also able to configure the Smart Data Extraction feature. To do so:
+
+- Select the data type that should be extracted from the drop down menu located on the respective property.
+
+Currently, IBM Automation Mobile Capture, supports smart data extraction for the following data types:
+
+- Date
+- E-mail
+- Phone Number
+- Currency (USD, EUR, GBP, SAR)
+
 
 5)  `Barcode:` This step allows users the possibility of scanning a multitude of barcode formats.
 
