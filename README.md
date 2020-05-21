@@ -14,8 +14,24 @@ Check the [Sizing] section in the [Installation and Deployment Guire]()
 
 ## Administration and Configuration
 
-Follow the [AMC Administration Guide]()
+Follow the [AMC Administration Guide](admin/AMC_Administration_Guide.md)
 
-## Training for Apps uses 
+## Training for Apps users 
 
 Follow the [User Training Guide]()
+
+## Building  Applications
+
+### iOS 
+To start building apps for iOS follow the [iOS Developer Guide]()
+
+The sample application for iOS can be found [HERE]()
+
+[HERE]() you can find the SDK reference.
+
+### Android
+To start building apps for Android follow the [Android Developer Guide]()
+
+The sample application for Android can be found [HERE]()
+
+[HERE]() you can find the SDK reference.
