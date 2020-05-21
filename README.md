@@ -8,7 +8,7 @@ The guide for a "demo" deployment can be found [here](https://github.com/ibm-ecm
 
 To install AMC for installation purposes read the [AMC Deployment Guide]()
 
-## Sizing and requirements for dnterprise deployment
+## Sizing and requirements for Enterprise deployment
 
 Check the [Sizing] section in the [Installation and Deployment Guire]()
 
