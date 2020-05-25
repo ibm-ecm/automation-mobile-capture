@@ -6,11 +6,11 @@ This repository serves as a single point of reference for the Automation Mobile 
 
 The guide for a "demo" deployment can be found [here](https://github.com/ibm-ecm/automation-mobile-capture-local-deployment)
 
-To install AMC for installation purposes read the [AMC Deployment Guide]()
+To install AMC for enterprise purposes read the [AMC Deployment Guide]()
 
 ## Sizing and requirements for Enterprise deployment
 
-Check the [Sizing] section in the [Installation and Deployment Guire]()
+Check the [Sizing] section in the [Installation and Deployment Guide]()
 
 ## Administration and Configuration
 
