@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ImcWorkerFactory.createWorker - IBM Capture Platform Android</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">IBM Capture Platform Android</a>&nbsp;/&nbsp;<a href="../index.html">com.ibm.capture.sdk.api.offline</a>&nbsp;/&nbsp;<a href="index.html">ImcWorkerFactory</a>&nbsp;/&nbsp;<a href="./create-worker.html">createWorker</a><br/>
+<br/>
+<h1>createWorker</h1>
+<a name="com.ibm.capture.sdk.api.offline.ImcWorkerFactory$createWorker(android.content.Context, kotlin.String, androidx.work.WorkerParameters)"></a>
+<code><span class="keyword">fun </span><span class="identifier">createWorker</span><span class="symbol">(</span><span class="identifier" id="com.ibm.capture.sdk.api.offline.ImcWorkerFactory$createWorker(android.content.Context, kotlin.String, androidx.work.WorkerParameters)/appContext">appContext</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.ibm.capture.sdk.api.offline.ImcWorkerFactory$createWorker(android.content.Context, kotlin.String, androidx.work.WorkerParameters)/workerClassName">workerClassName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.ibm.capture.sdk.api.offline.ImcWorkerFactory$createWorker(android.content.Context, kotlin.String, androidx.work.WorkerParameters)/workerParameters">workerParameters</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/androidx/androidx/work/WorkerParameters.html"><span class="identifier">WorkerParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/androidx/androidx/work/ListenableWorker.html"><span class="identifier">ListenableWorker</span></a><span class="symbol">?</span></code>
+<p>Override this method to implement your custom worker-creation logic.  Use
+<a href="#">Configuration.Builder.setWorkerFactory</a> to use your custom class.</p>
+<p>Returns a new instance of the specified <code>workerClassName</code> given the arguments.  The
+returned worker should be a newly-created instance and must not have been previously returned
+or used by WorkManager.</p>
+<h3>Parameters</h3>
+<p><a name="appContext"></a>
+<code>appContext</code> - The application context</p>
+<p><a name="workerClassName"></a>
+<code>workerClassName</code> - The class name of the worker to create</p>
+<p><a name="workerParameters"></a>
+<code>workerParameters</code> - Parameters for worker initialization</p>
+<p><strong>Return</strong><br/>
+A new <a href="https://developer.android.com/reference/androidx/androidx/work/ListenableWorker.html">ListenableWorker</a> instance of type <code>workerClassName</code>, or
+<code>null</code> if the worker could not be created</p>
+</BODY>
+</HTML>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMCNetworkRequestBuilder Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/IMCNetworkRequestBuilder" class="dashAnchor"></a>
+    <a title="IMCNetworkRequestBuilder Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IBM Mobile Capture SDK</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IBMCaptureSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        IMCNetworkRequestBuilder Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/IMCDataProviderManager.html">IMCDataProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestBuilder.html">IMCNetworkRequestBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestError.html">IMCNetworkRequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCRequesterFactory.html">IMCRequesterFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCStepFile.html">IMCStepFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionNumber">IBMCaptureSDKVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionString">IBMCaptureSDKVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IMCNetworkRequestErrorDomain">IMCNetworkRequestErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestErrorCode.html">IMCNetworkRequestErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCStepType.html">IMCStepType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCUploadState.html">IMCUploadState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCField.html">IMCField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCFile.html">IMCFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPersistentRequester.html">IMCPersistentRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPhotoCaptureStep.html">IMCPhotoCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCProperty.html">IMCProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequest.html">IMCRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequester.html">IMCRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCScenario.html">IMCScenario</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCSession.html">IMCSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCStep.html">IMCStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZone.html">IMCZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedDocumentCaptureStep.html">IMCZonedDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedField.html">IMCZonedField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>IMCNetworkRequestBuilder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">IMCNetworkRequestBuilder</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="c1">/// The URL from where all the enpoints will be called.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">baseURL</span><span class="p">;</span>
+<span class="c1">/// Returns true if the username+password are saved. False otherwise. True doesn't mean that the user is authenticated against the server.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">authenticated</span><span class="p">;</span>
+<span class="c1">/// Called when the session state changes. The new value is what you should store to later on recreate this object with this sessionState.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span> <span class="n">sessionStateChanged</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nonnull</span> <span class="n">sessionState</span><span class="p">);</span>
+<span class="c1">/// The IMCNetworkRequester used to perform network calls to the API.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a></span><span class="o">&gt;</span> <span class="n">networkRequester</span><span class="p">;</span>
+<span class="c1">/// The IMCNetworkRequester used to upload files. It's different from the regular `networkRequester` because the `fileUploadNetworkRequester` doesn't include any headers
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a></span><span class="o">&gt;</span> <span class="n">fileUploadNetworkRequester</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="c1">/// Create a new instance of this object.
+/// @param baseURL The base URL from where the enpoints will be called.
+/// @param accessId The access Id (if any)
+/// @param accessSecretKey The secret access key (if any)
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithBaseURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">baseURL</span>
+                                 <span class="nf">accessId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessId</span>
+                          <span class="nf">accessSecretKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessSecretKey</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+
+<span class="c1">/// Create a new instance of this object.
+/// @param baseURL The base URL from where the enpoints will be called.
+/// @param accessId The access Id (if any)
+/// @param accessSecretKey The secret access key (if any)
+/// @param sessionState The session state that was given to you on a previous authentication. Use this method to keep the user logged in.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithBaseURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">baseURL</span>
+                                <span class="nf">accessId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessId</span>
+                         <span class="nf">accessSecretKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessSecretKey</span>
+                            <span class="nf">sessionState</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">sessionState</span><span class="p">;</span>
+
+
+<span class="c1">/// Authenticate agains the server. If the operation succeeds, the sessionState returned should be saved and used to recreate this object later on to avoid having to input again the user credentials.
+/// @param credential The username and password combination to login.
+/// @param completion The result of the operation. If it succeeds, the sessionState should be stored in Keychain to be retrieved later on. If it fails, the error will contain the reason of the failure.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateWithCredential</span><span class="p">:(</span><span class="n">NSURLCredential</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">credential</span>
+                        <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">sessionState</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span>
+
+
+<span class="c1">/// Logout the user. Remove the in memory stored data related to the credentials + call the server to invalidate the token.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">deauthenticate</span><span class="p">;</span>
+
+<span class="c1">/// Invalidates the URLSession used for the IMCNetworkRequester. After calling this, you should not perform any more ntwork calls, if URLSession has been
+/// invalidates it asserts as soon as you try to call it.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">invalidate</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(py)baseURL"></a>
+                    <a name="//apple_ref/objc/Property/baseURL" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(py)baseURL">baseURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL from where all the enpoints will be called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">baseURL</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(py)authenticated"></a>
+                    <a name="//apple_ref/objc/Property/authenticated" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(py)authenticated">authenticated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if the username+password are saved. False otherwise. True doesn&rsquo;t mean that the user is authenticated against the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">authenticated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">authenticated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(py)sessionStateChanged"></a>
+                    <a name="//apple_ref/objc/Property/sessionStateChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(py)sessionStateChanged">sessionStateChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the session state changes. The new value is what you should store to later on recreate this object with this sessionState.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span> <span class="n">sessionStateChanged</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sessionStateChanged</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSSecureCoding</span> <span class="o">&amp;</span> <span class="kt">NSObjectProtocol</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(py)networkRequester"></a>
+                    <a name="//apple_ref/objc/Property/networkRequester" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(py)networkRequester">networkRequester</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IMCNetworkRequester used to perform network calls to the API.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a></span><span class="o">&gt;</span>
+    <span class="n">networkRequester</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">networkRequester</span><span class="p">:</span> <span class="kt">NetworkRequester</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(py)fileUploadNetworkRequester"></a>
+                    <a name="//apple_ref/objc/Property/fileUploadNetworkRequester" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(py)fileUploadNetworkRequester">fileUploadNetworkRequester</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IMCNetworkRequester used to upload files. It&rsquo;s different from the regular <code><a href="../Classes/IMCNetworkRequestBuilder.html#/c:objc(cs)IMCNetworkRequestBuilder(py)networkRequester">networkRequester</a></code> because the <code>fileUploadNetworkRequester</code> doesn&rsquo;t include any headers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a></span><span class="o">&gt;</span>
+    <span class="n">fileUploadNetworkRequester</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fileUploadNetworkRequester</span><span class="p">:</span> <span class="kt">NetworkRequester</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)initWithBaseURL:accessId:accessSecretKey:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBaseURL:accessId:accessSecretKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)initWithBaseURL:accessId:accessSecretKey:">-initWithBaseURL:accessId:accessSecretKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new instance of this object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithBaseURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">baseURL</span>
+                                <span class="nf">accessId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessId</span>
+                         <span class="nf">accessSecretKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessSecretKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">accessId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accessSecretKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The base URL from where the enpoints will be called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The access Id (if any)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessSecretKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The secret access key (if any)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)initWithBaseURL:accessId:accessSecretKey:sessionState:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBaseURL:accessId:accessSecretKey:sessionState:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)initWithBaseURL:accessId:accessSecretKey:sessionState:">-initWithBaseURL:accessId:accessSecretKey:sessionState:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new instance of this object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithBaseURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">baseURL</span>
+                                <span class="nf">accessId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessId</span>
+                         <span class="nf">accessSecretKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">accessSecretKey</span>
+                            <span class="nf">sessionState</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span>
+                                             <span class="n">sessionState</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">accessId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">accessSecretKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">sessionState</span><span class="p">:</span> <span class="kt">NSSecureCoding</span> <span class="o">&amp;</span> <span class="kt">NSObjectProtocol</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The base URL from where the enpoints will be called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The access Id (if any)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessSecretKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The secret access key (if any)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionState</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session state that was given to you on a previous authentication. Use this method to keep the user logged in.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)authenticateWithCredential:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticateWithCredential:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)authenticateWithCredential:completion:">-authenticateWithCredential:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authenticate agains the server. If the operation succeeds, the sessionState returned should be saved and used to recreate this object later on to avoid having to input again the user credentials.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateWithCredential</span><span class="p">:(</span><span class="n">NSURLCredential</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">credential</span>
+                        <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span>
+                                       <span class="n">id</span><span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span>
+                                       <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">with</span> <span class="nv">credential</span><span class="p">:</span> <span class="kt">URLCredential</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(((</span><span class="kt">NSSecureCoding</span> <span class="o">&amp;</span> <span class="kt">NSObjectProtocol</span><span class="p">)?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>credential</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username and password combination to login.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the operation. If it succeeds, the sessionState should be stored in Keychain to be retrieved later on. If it fails, the error will contain the reason of the failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)deauthenticate"></a>
+                    <a name="//apple_ref/objc/Method/-deauthenticate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)deauthenticate">-deauthenticate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logout the user. Remove the in memory stored data related to the credentials + call the server to invalidate the token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">deauthenticate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deauthenticate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCNetworkRequestBuilder(im)invalidate"></a>
+                    <a name="//apple_ref/objc/Method/-invalidate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCNetworkRequestBuilder(im)invalidate">-invalidate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invalidates the URLSession used for the IMCNetworkRequester. After calling this, you should not perform any more ntwork calls, if URLSession has been
+invalidates it asserts as soon as you try to call it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">invalidate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">invalidate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

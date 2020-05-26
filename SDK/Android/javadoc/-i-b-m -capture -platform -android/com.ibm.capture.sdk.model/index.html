@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.ibm.capture.sdk.model - IBM Capture Platform Android</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">IBM Capture Platform Android</a>&nbsp;/&nbsp;<a href="./index.html">com.ibm.capture.sdk.model</a><br/>
+<br/>
+<h2>Package com.ibm.capture.sdk.model</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-barcode-step/index.html">BarcodeStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BarcodeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-barcode-step.html"><span class="identifier">IBarcodeStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-data-provider-step/index.html">DataProviderStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DataProviderStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-data-provider-step.html"><span class="identifier">IDataProviderStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-document-step/index.html">DocumentStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DocumentStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-document-step/index.html"><span class="identifier">IDocumentStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-driver-license-step/index.html">DriverLicenseStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DriverLicenseStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-driver-license-step.html"><span class="identifier">IDriverLicenseStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-barcode-step.html">IBarcodeStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for Barcode capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IBarcodeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-data-provider-step.html">IDataProviderStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for an external Data Provider</p>
+<code><span class="keyword">interface </span><span class="identifier">IDataProviderStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-document-step/index.html">IDocumentStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for generic document capture. Includes a allowImportFromDevice value, representing the
+value on the server</p>
+<code><span class="keyword">interface </span><span class="identifier">IDocumentStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-driver-license-step.html">IDriverLicenseStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for Driver License capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IDriverLicenseStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-passport-step.html">IPassportStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for Passport capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IPassportStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-photo-step/index.html">IPhotoStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for Photo capture. Include a cardinality to determine the number of required images,
+<a href="#">0</a> means an indefinite number of pictures.
+Also Includes a allowImportFromDevice value, representing the value on the server.</p>
+<code><span class="keyword">interface </span><span class="identifier">IPhotoStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-property-editor-step.html">IPropertyEditorStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for <a href="-step-field/index.html">StepField</a> property editor</p>
+<code><span class="keyword">interface </span><span class="identifier">IPropertyEditorStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-scenario-property/index.html">IScenarioProperty</a></h4>
+</td>
+<td>
+<p>Interface for a session property required for a step</p>
+<code><span class="keyword">interface </span><span class="identifier">IScenarioProperty</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-session/index.html">ISession</a></h4>
+</td>
+<td>
+<p>Interface for a session performing a <a href="-scenario/index.html">Scenario</a></p>
+<code><span class="keyword">interface </span><span class="identifier">ISession</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-step/index.html">IStep</a></h4>
+</td>
+<td>
+<p>Interface for defining a <a href="-scenario/index.html">Scenario</a> step</p>
+<code><span class="keyword">interface </span><span class="identifier">IStep</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-step-field/index.html">IStepField</a></h4>
+</td>
+<td>
+<p>Interface for a <a href="-i-step/index.html">IStep</a> required field</p>
+<code><span class="keyword">interface </span><span class="identifier">IStepField</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-i-upload-step.html">IUploadStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="-i-step/index.html">IStep</a> for upload</p>
+<code><span class="keyword">interface </span><span class="identifier">IUploadStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-passport-step/index.html">PassportStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PassportStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-passport-step.html"><span class="identifier">IPassportStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-photo-step/index.html">PhotoStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PhotoStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-photo-step/index.html"><span class="identifier">IPhotoStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-property-editor-step/index.html">PropertyEditorStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PropertyEditorStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-property-editor-step.html"><span class="identifier">IPropertyEditorStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scenario/index.html">Scenario</a></h4>
+</td>
+<td>
+<p>Scenario data object including the steps to perform</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Scenario</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-scenario-property/index.html">ScenarioProperty</a></h4>
+</td>
+<td>
+<p>Data object <a href="-i-scenario-property/index.html">IScenarioProperty</a> required for a step</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ScenarioProperty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-scenario-property/index.html"><span class="identifier">IScenarioProperty</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-session/index.html">Session</a></h4>
+</td>
+<td>
+<p>Data object <a href="-i-session/index.html">ISession</a></p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Session</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-session/index.html"><span class="identifier">ISession</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-step-field/index.html">StepField</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">StepField</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step-field/index.html"><span class="identifier">IStepField</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-stub-step/index.html">StubStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">StubStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-step/index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+<h4><a href="-upload-step/index.html">UploadStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">UploadStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-i-upload-step.html"><span class="identifier">IUploadStep</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

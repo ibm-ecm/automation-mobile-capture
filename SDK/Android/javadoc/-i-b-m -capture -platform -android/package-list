@@ -1,0 +1,14 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.ibm.capture.sdk.api
+com.ibm.capture.sdk.api.exceptions
+com.ibm.capture.sdk.api.offline
+com.ibm.capture.sdk.model
+com.ibm.capture.sdk.ocr
+com.ibm.capture.sdk.ui
+com.ibm.capture.sdk.ui.manual
+com.ibm.capture.sdk.ui.steps
+com.ibm.capture.sdk.ui.steps.document
+com.ibm.capture.sdk.ui.steps.passport
+com.ibm.capture.sdk.ui.steps.photo

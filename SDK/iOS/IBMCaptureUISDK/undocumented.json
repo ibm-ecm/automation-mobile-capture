@@ -1,0 +1,278 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Other/OCREngine.swift",
+      "line": 13,
+      "symbol": "OCREngine.recognizeText(in:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/BarcodeCaptureViewController.swift",
+      "line": 16,
+      "symbol": "BarcodeCaptureViewController.step",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/BarcodeCaptureViewController.swift",
+      "line": 25,
+      "symbol": "BarcodeCaptureViewController.init(step:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/BarcodeCaptureViewController.swift",
+      "line": 43,
+      "symbol": "BarcodeCaptureViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/BarcodeCaptureViewController.swift",
+      "line": 57,
+      "symbol": "BarcodeCaptureViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/BarcodeCaptureViewController.swift",
+      "line": 62,
+      "symbol": "BarcodeCaptureViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/DocumentCaptureViewController.swift",
+      "line": 18,
+      "symbol": "DocumentCaptureViewController.step",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/DocumentCaptureViewController.swift",
+      "line": 21,
+      "symbol": "DocumentCaptureViewController.init(step:reviewViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/ImageReviewViewController.swift",
+      "line": 31,
+      "symbol": "ImageReviewViewController.DataExtractionStatus.loading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/ImageReviewViewController.swift",
+      "line": 32,
+      "symbol": "ImageReviewViewController.DataExtractionStatus.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/ImageReviewViewController.swift",
+      "line": 33,
+      "symbol": "ImageReviewViewController.DataExtractionStatus.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/ImageReviewViewController.swift",
+      "line": 54,
+      "symbol": "ImageReviewViewController.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/ImageReviewViewController.swift",
+      "line": 64,
+      "symbol": "ImageReviewViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/OCRViewController.swift",
+      "line": 44,
+      "symbol": "OCRViewController.init(image:ocrEngine:extractedData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/OCRViewController.swift",
+      "line": 57,
+      "symbol": "OCRViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/OCRViewController.swift",
+      "line": 81,
+      "symbol": "OCRViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/OCRViewController.swift",
+      "line": 130,
+      "symbol": "OCRViewController.viewForZooming(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PassportCaptureViewController.swift",
+      "line": 20,
+      "symbol": "PassportCaptureViewController.step",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PassportCaptureViewController.swift",
+      "line": 23,
+      "symbol": "PassportCaptureViewController.init(step:reviewViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 16,
+      "symbol": "PhotoCaptureViewController.step",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 18,
+      "symbol": "PhotoCaptureViewController.shutterButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 26,
+      "symbol": "PhotoCaptureViewController.init(step:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 52,
+      "symbol": "PhotoCaptureViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 69,
+      "symbol": "PhotoCaptureViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/PhotoCaptureViewController.swift",
+      "line": 74,
+      "symbol": "PhotoCaptureViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/RectangleDetectorViewController.swift",
+      "line": 19,
+      "symbol": "RectangleDetectorViewController.State.capturing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/RectangleDetectorViewController.swift",
+      "line": 20,
+      "symbol": "RectangleDetectorViewController.State.reviewing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/RectangleDetectorViewController.swift",
+      "line": 59,
+      "symbol": "RectangleDetectorViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/USDLCaptureViewController.swift",
+      "line": 19,
+      "symbol": "USDLCaptureViewController.Output.frontImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/USDLCaptureViewController.swift",
+      "line": 20,
+      "symbol": "USDLCaptureViewController.Output.backImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/USDLCaptureViewController.swift",
+      "line": 21,
+      "symbol": "USDLCaptureViewController.Output.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/USDLCaptureViewController.swift",
+      "line": 73,
+      "symbol": "USDLCaptureViewController.init(step:frontReviewViewController:backReviewViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/ViewControllers/USDLCaptureViewController.swift",
+      "line": 85,
+      "symbol": "USDLCaptureViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/BarcodeCameraView.swift",
+      "line": 166,
+      "symbol": "BarcodeCameraView.barcodeImageDetector(_:didProcessStreamImage:withQuadrilateral:normalizedQuadrilateral:payload:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/RectangleImageDetectorCameraView.swift",
+      "line": 101,
+      "symbol": "RectangleImageDetectorCameraView.rectangleImageDetector(_:didProcessFullResolutionImage:withCorrectedImage:quadrilateral:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/RectangleImageDetectorCameraView.swift",
+      "line": 108,
+      "symbol": "RectangleImageDetectorCameraView.rectangleImageDetector(_:didProcessStreamImage:withCorrectedImage:quadrilateral:stable:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/ShapeView.swift",
+      "line": 11,
+      "symbol": "ShapeView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/ShapeView.swift",
+      "line": 13,
+      "symbol": "ShapeView.shapeLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureUISDK/IBMCaptureUISDK/Views/ShapeView.swift",
+      "line": 17,
+      "symbol": "ShapeView.layerClass",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vagrant/git"
+}

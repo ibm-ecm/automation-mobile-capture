@@ -1,0 +1,964 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IBMCaptureSDK.h",
+      "line": 12,
+      "symbol": "IBMCaptureSDKVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IBMCaptureSDK.h",
+      "line": 15,
+      "symbol": "IBMCaptureSDKVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCDataProviderManager.h",
+      "line": 17,
+      "symbol": "IMCDataProviderManager",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 14,
+      "symbol": "IMCNetworkDataRequestCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 15,
+      "symbol": "IMCNetworkDataRequestDictionaryCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 16,
+      "symbol": "IMCNetworkDataRequestArrayCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 19,
+      "symbol": "IMCNetworkDataRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 21,
+      "symbol": "IMCNetworkDataRequest.-dataCompletion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 22,
+      "symbol": "IMCNetworkDataRequest.-dictionaryCompletion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDataRequest.h",
+      "line": 23,
+      "symbol": "IMCNetworkDataRequest.-arrayCompletion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDownloadRequest.h",
+      "line": 13,
+      "symbol": "IMCNetworkDownloadRequestCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDownloadRequest.h",
+      "line": 16,
+      "symbol": "IMCNetworkDownloadRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkDownloadRequest.h",
+      "line": 18,
+      "symbol": "IMCNetworkDownloadRequest.-downloadCompletion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 11,
+      "symbol": "IMCNetworkRequestCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 12,
+      "symbol": "IMCNetworkRequestProgressBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 13,
+      "symbol": "IMCNetworkRequestErrorBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 14,
+      "symbol": "IMCNetworkRequestSuccessBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 17,
+      "symbol": "IMCNetworkRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 19,
+      "symbol": "IMCNetworkRequest.responseHeaders",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 21,
+      "symbol": "IMCNetworkRequest.-completion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 22,
+      "symbol": "IMCNetworkRequest.-progress:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 23,
+      "symbol": "IMCNetworkRequest.-error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 24,
+      "symbol": "IMCNetworkRequest.-success:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 26,
+      "symbol": "IMCNetworkRequest.-resume",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 27,
+      "symbol": "IMCNetworkRequest.-suspend",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequest.h",
+      "line": 28,
+      "symbol": "IMCNetworkRequest.-cancel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestBuilder.h",
+      "line": 17,
+      "symbol": "IMCNetworkRequestBuilder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestBuilder.h",
+      "line": 30,
+      "symbol": "IMCNetworkRequestBuilder.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 11,
+      "symbol": "IMCNetworkRequestErrorDomain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 13,
+      "symbol": "IMCNetworkRequestErrorCode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 13,
+      "symbol": "IMCNetworkRequestErrorCode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 14,
+      "symbol": "IMCNetworkRequestErrorCode.IMCNetworkRequestErrorCodeServerError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 15,
+      "symbol": "IMCNetworkRequestErrorCode.IMCNetworkRequestErrorCodeUnauthorized",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 16,
+      "symbol": "IMCNetworkRequestErrorCode.IMCNetworkRequestErrorCodeBadRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 17,
+      "symbol": "IMCNetworkRequestErrorCode.IMCNetworkRequestErrorCodeNotFound",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 18,
+      "symbol": "IMCNetworkRequestErrorCode.IMCNetworkRequestErrorCodeUnableToPollData",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequestError.h",
+      "line": 22,
+      "symbol": "IMCNetworkRequestError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 16,
+      "symbol": "IMCNetworkHTTPMethod",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 16,
+      "symbol": "IMCNetworkHTTPMethod",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 17,
+      "symbol": "IMCNetworkHTTPMethod.IMCNetworkHTTPMethodGET",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 18,
+      "symbol": "IMCNetworkHTTPMethod.IMCNetworkHTTPMethodPOST",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 19,
+      "symbol": "IMCNetworkHTTPMethod.IMCNetworkHTTPMethodPUT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 20,
+      "symbol": "IMCNetworkHTTPMethod.IMCNetworkHTTPMethodDELETE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 21,
+      "symbol": "IMCNetworkHTTPMethod.IMCNetworkHTTPMethodPATCH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 24,
+      "symbol": "IMCNetworkRequestEncoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 24,
+      "symbol": "IMCNetworkRequestEncoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 25,
+      "symbol": "IMCNetworkRequestEncoding.IMCNetworkRequestEncodingJSONEncoded",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 26,
+      "symbol": "IMCNetworkRequestEncoding.IMCNetworkRequestEncodingFormURLEncoded",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 29,
+      "symbol": "IMCNetworkRequesterErrorBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 36,
+      "symbol": "IMCNetworkRequestAdapter",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 38,
+      "symbol": "IMCNetworkRequestAdapter.-adaptRequest:error:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 43,
+      "symbol": "IMCNetworkRequestRecovererCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 46,
+      "symbol": "IMCNetworkRequestRecoverer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 49,
+      "symbol": "IMCNetworkRequestRecoverer.-recoverRequest:withResponse:error:completion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 58,
+      "symbol": "IMCNetworkRequester",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 60,
+      "symbol": "IMCNetworkRequester.additionalHeaders",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 61,
+      "symbol": "IMCNetworkRequester.requestAdapters",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 62,
+      "symbol": "IMCNetworkRequester.requestRecoverers",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 65,
+      "symbol": "IMCNetworkRequester.-dataRequestWithURL:method:headers:parameters:encoding:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 66,
+      "symbol": "IMCNetworkRequester.-dataRequestWithURL:method:headers:parametersArray:encoding:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 67,
+      "symbol": "IMCNetworkRequester.-downloadRequestWithURL:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 68,
+      "symbol": "IMCNetworkRequester.-uploadRequestWithURL:method:headers:data:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 71,
+      "symbol": "IMCNetworkRequester.-dataRequestVialWithURL:method:headers:parameters:encoding:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 72,
+      "symbol": "IMCNetworkRequester.-dataRequestVialWithURL:method:headers:parametersArray:encoding:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 73,
+      "symbol": "IMCNetworkRequester.-downloadRequestVialWithURL:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 74,
+      "symbol": "IMCNetworkRequester.-uploadRequestVialWithURL:method:headers:data:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 77,
+      "symbol": "IMCNetworkRequester.-dataRequestWithRequestVial:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 78,
+      "symbol": "IMCNetworkRequester.-downloadRequestWithRequestVial:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 79,
+      "symbol": "IMCNetworkRequester.-uploadRequestWithRequestVial:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 82,
+      "symbol": "IMCNetworkRequester.-setGlobalErrorHandler:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 84,
+      "symbol": "IMCNetworkRequester.-invalidateSession",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 88,
+      "symbol": "IMCNetworkRequester",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkRequester.h",
+      "line": 90,
+      "symbol": "IMCNetworkRequester.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCNetworkUploadRequest.h",
+      "line": 14,
+      "symbol": "IMCNetworkUploadRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 13,
+      "symbol": "IMCRequestCompletionBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 14,
+      "symbol": "IMCRequestProgressBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 15,
+      "symbol": "IMCRequestErrorBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 16,
+      "symbol": "IMCRequestSuccessBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 19,
+      "symbol": "IMCRequestWillChangeBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 20,
+      "symbol": "IMCRequestInsertedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 21,
+      "symbol": "IMCRequestDeletedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 22,
+      "symbol": "IMCRequestMovedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 23,
+      "symbol": "IMCRequestUpdatedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 24,
+      "symbol": "IMCRequestDidChangeBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 27,
+      "symbol": "IMCRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 61,
+      "symbol": "IMCRequest.-startReportingChanges",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequest.h",
+      "line": 63,
+      "symbol": "IMCRequest.-duplicate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequester.h",
+      "line": 25,
+      "symbol": "IMCRequester",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequester.h",
+      "line": 64,
+      "symbol": "IMCPersistentRequester",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCRequester.h",
+      "line": 74,
+      "symbol": "IMCRequesterFactory",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 18,
+      "symbol": "IMCUploadState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 18,
+      "symbol": "IMCUploadState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 19,
+      "symbol": "IMCUploadState.IMCUploadStateUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 20,
+      "symbol": "IMCUploadState.IMCUploadStateUploading",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 21,
+      "symbol": "IMCUploadState.IMCUploadStateErrored",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 22,
+      "symbol": "IMCUploadState.IMCUploadStatePendingUpload",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 23,
+      "symbol": "IMCUploadState.IMCUploadStateComplete",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCSession.h",
+      "line": 74,
+      "symbol": "IMCFile.uploadProgress",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 17,
+      "symbol": "IMCStepType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 17,
+      "symbol": "IMCStepType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 18,
+      "symbol": "IMCStepType.IMCStepTypeUnsupported",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 19,
+      "symbol": "IMCStepType.IMCStepTypeDriversLicenseUS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 20,
+      "symbol": "IMCStepType.IMCStepTypeMRZDocument",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 21,
+      "symbol": "IMCStepType.IMCStepTypeZonedDocument",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 22,
+      "symbol": "IMCStepType.IMCStepTypePropertyEditor",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 23,
+      "symbol": "IMCStepType.IMCStepTypeBarcode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 24,
+      "symbol": "IMCStepType.IMCStepTypePhoto",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCStep.h",
+      "line": 25,
+      "symbol": "IMCStepType.IMCStepTypeDataProvider",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 21,
+      "symbol": "IMCStepFile",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 23,
+      "symbol": "IMCStepFile.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 31,
+      "symbol": "IMCStepFile.stepId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 32,
+      "symbol": "IMCStepFile.fileURLs",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 37,
+      "symbol": "IMCUploadManager",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 53,
+      "symbol": "IMCUploadManager",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCUploadManager.h",
+      "line": 55,
+      "symbol": "IMCUploadManager.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCZone.h",
+      "line": 19,
+      "symbol": "IMCZone.x",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCZone.h",
+      "line": 20,
+      "symbol": "IMCZone.y",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCZone.h",
+      "line": 21,
+      "symbol": "IMCZone.width",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/IMCZone.h",
+      "line": 22,
+      "symbol": "IMCZone.height",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 13,
+      "symbol": "IMCNetworkRequestVialType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 13,
+      "symbol": "IMCNetworkRequestVialType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 14,
+      "symbol": "IMCNetworkRequestVialType.IMCNetworkRequestVialTypeData",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 15,
+      "symbol": "IMCNetworkRequestVialType.IMCNetworkRequestVialTypeDownload",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 16,
+      "symbol": "IMCNetworkRequestVialType.IMCNetworkRequestVialTypeUpload",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 20,
+      "symbol": "IMCNetworkRequestVial",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 22,
+      "symbol": "IMCNetworkRequestVial.url",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 23,
+      "symbol": "IMCNetworkRequestVial.method",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 24,
+      "symbol": "IMCNetworkRequestVial.headers",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 25,
+      "symbol": "IMCNetworkRequestVial.urlParameters",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 26,
+      "symbol": "IMCNetworkRequestVial.parameters",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 27,
+      "symbol": "IMCNetworkRequestVial.parametersArray",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 28,
+      "symbol": "IMCNetworkRequestVial.encoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 30,
+      "symbol": "IMCNetworkRequestVial.type",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 35,
+      "symbol": "IMCNetworkDataRequestVial",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 39,
+      "symbol": "IMCNetworkDownloadRequestVial",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 43,
+      "symbol": "IMCNetworkUploadRequestVial",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/IBMCaptureSDK/IBMCaptureSDK/Vial/IMCNetworkRequestVial.h",
+      "line": 45,
+      "symbol": "IMCNetworkUploadRequestVial.data",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vagrant/git"
+}
