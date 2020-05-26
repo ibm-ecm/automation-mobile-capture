@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMCDataProviderManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/IMCDataProviderManager" class="dashAnchor"></a>
+    <a title="IMCDataProviderManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IBM Mobile Capture SDK</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IBMCaptureSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        IMCDataProviderManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/IMCDataProviderManager.html">IMCDataProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestBuilder.html">IMCNetworkRequestBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestError.html">IMCNetworkRequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCRequesterFactory.html">IMCRequesterFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCStepFile.html">IMCStepFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionNumber">IBMCaptureSDKVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionString">IBMCaptureSDKVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IMCNetworkRequestErrorDomain">IMCNetworkRequestErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestErrorCode.html">IMCNetworkRequestErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCStepType.html">IMCStepType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCUploadState.html">IMCUploadState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCField.html">IMCField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCFile.html">IMCFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPersistentRequester.html">IMCPersistentRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPhotoCaptureStep.html">IMCPhotoCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCProperty.html">IMCProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequest.html">IMCRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequester.html">IMCRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCScenario.html">IMCScenario</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCSession.html">IMCSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCStep.html">IMCStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZone.html">IMCZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedDocumentCaptureStep.html">IMCZonedDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedField.html">IMCZonedField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>IMCDataProviderManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">IMCDataProviderManager</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="c1">/// The amount of seconds between every polling call. Defaults to 5 seconds.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">)</span> <span class="kt">float</span> <span class="n">pollingInterval</span><span class="p">;</span>
+
+<span class="c1">/// The maximum number of retries for the poll. Defaults to 10 times.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">)</span> <span class="kt">int</span> <span class="n">maxRetries</span><span class="p">;</span>
+
+<span class="c1">/// Returns a session that will be local only at the beggining but later on it will be updated with a remote one.
+/// @param previousSession If you already have a session, pass it so we don't create a new one
+/// @param scenario The scenario for which the session will be created
+/// @param propertyContainers The IMCPropertyValueContainer that need to be uploaded to the server
+/// @param completion The block that will run when the process is completed. It returns the propertyValueContainer if it's successful or an error if it fails.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCSession.html">IMCSession</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">processSession</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCSession.html">IMCSession</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">previousSession</span>
+                              <span class="nf">forScenario</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCScenario.html">IMCScenario</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">scenario</span>
+                                   <span class="nf">atStep</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">step</span>
+                   <span class="nf">withPropertyContainers</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">propertyContainers</span>
+                               <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCDataProviderManager(py)pollingInterval"></a>
+                    <a name="//apple_ref/objc/Property/pollingInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCDataProviderManager(py)pollingInterval">pollingInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of seconds between every polling call. Defaults to 5 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">float</span> <span class="n">pollingInterval</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pollingInterval</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCDataProviderManager(py)maxRetries"></a>
+                    <a name="//apple_ref/objc/Property/maxRetries" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCDataProviderManager(py)maxRetries">maxRetries</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of retries for the poll. Defaults to 10 times.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">int</span> <span class="n">maxRetries</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxRetries</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCDataProviderManager(im)processSession:forScenario:atStep:withPropertyContainers:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-processSession:forScenario:atStep:withPropertyContainers:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCDataProviderManager(im)processSession:forScenario:atStep:withPropertyContainers:completion:">-processSession:forScenario:atStep:withPropertyContainers:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a session that will be local only at the beggining but later on it will be updated with a remote one.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCSession.html">IMCSession</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span>
+            <span class="nf">processSession</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCSession.html">IMCSession</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">previousSession</span>
+               <span class="nf">forScenario</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCScenario.html">IMCScenario</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">scenario</span>
+                    <span class="nf">atStep</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">step</span>
+    <span class="nf">withPropertyContainers</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">propertyContainers</span>
+                <span class="nf">completion</span><span class="p">:</span>
+                    <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span>
+                        <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                        <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>previousSession</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If you already have a session, pass it so we don&rsquo;t create a new one</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scenario</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scenario for which the session will be created</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propertyContainers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The IMCPropertyValueContainer that need to be uploaded to the server</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block that will run when the process is completed. It returns the propertyValueContainer if it&rsquo;s successful or an error if it fails.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

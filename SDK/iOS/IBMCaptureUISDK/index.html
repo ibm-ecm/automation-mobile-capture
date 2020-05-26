@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IBMCaptureUISDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="IBMCaptureUISDK  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">IBM Mobile Capture SDK</a> (47% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">IBMCaptureUISDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        IBMCaptureUISDK  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BarcodeCaptureViewController.html">BarcodeCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DocumentCaptureViewController.html">DocumentCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ImageReviewViewController.html">ImageReviewViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ImageReviewViewController/DataExtractionStatus.html">– DataExtractionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OCRViewController.html">OCRViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PassportCaptureViewController.html">PassportCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PhotoCaptureViewController.html">PhotoCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RectangleDetectorViewController.html">RectangleDetectorViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RectangleDetectorViewController/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ShapeView.html">ShapeView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/USDLCaptureViewController.html">USDLCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/USDLCaptureViewController/Output.html">– Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/USDLCaptureViewController/USDLTheme.html">– USDLTheme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ImageReviewer.html">ImageReviewer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/OCREngine.html">OCREngine</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='network-data-model-amp-persistence-ibmcapturesdk' class='heading'>Network, Data Model &amp; Persistence (IBMCaptureSDK)</h1>
+
+<p>The goal of the app is to work completely offline, allowing the user to complete scenarios that he had previously downloaded while not having connection. When a Scenario is finished, the app will try to send the data to the server. If it fails to do so, we will enqueue it so that the next time that the app has an active internet connection, we will proceed to send the data.</p>
+
+<p>The persistence of the authenticated user is handled on the App side (not the SDK). You must store the token returned by the SDK to keep the user logged in. In order to start any network request, you must have a <code>URL</code> that will be used to create a <code>NetworkRequestBuilder(baseURL: url, accessId: nil, accessSecretKey: nil</code>. When you have a fully constructed <code>NetworkRequestBuilder</code>, you can try to <code>networkRequestBuilder.authenticate(with: credential)</code> to recieve a fresh <code>sessionState</code>. The <code>credential</code> passed to the <code>networkRequestBuilder.authenticate(with: credential)</code> is a <code>URLCredential(user: username, password: password, persistence: .none)</code>.</p>
+
+<p>When you recieve the callback with the <code>sessionState</code>, you <strong>must</strong> store the value in <code>Keychain</code> in order to keep the user logged in once the app is killed. <code>NetworkRequestBuilder(baseURL: url, accessId: nil, accessSecretKey: nil, sessionState: sessionState)</code> has an <code>init</code> that accepts the mentioned <code>sessionState</code>. On every app launch, to keep the user logged in, you should retrieve the <code>sessionState</code> from the <code>Keychain</code> and create the <code>NetworkRequestBuilder</code> using that session, that way you don&rsquo;t have to ask the user to log in every time.</p>
+
+<p>Once you have a <code>NetworkRequestBuilder</code>, you can create a <code>Requester</code>, which at the time of this writing, you can build using <code>RequesterFactory</code>. The <code>PersistentRequester</code> needs a <code>NetworkRequestBuilder</code>, a <code>FileManager</code> and a <code>URL</code>. The <code>Requester</code> is the type that you will interact with to ask for <code>Request</code>s, which are the data types that encapsulate the logic to give you access to the data, start/cancel operations, react to changes in the persistence layer, etc.</p>
+
+<p>For example, if you want to list the available scenarios, you would create a <code>Request</code> like this: <code>self.requester.scenariosRequest()</code>. This method returns a <code>Request</code> which allows you to add <code>closures</code> to it in order to react to changes. To trigger the start of the <code>scenariosRequest</code>, you need to call <code>execute()</code> on it, like so: <code>self.scenariosRequest.execute()</code>. Once you do that, a network request to fetch the scenarios will be trigger, and also you&rsquo;ll get updates, a completion, an error, etc. To access such notifications, you&rsquo;d write something like this:</p>
+<pre class="highlight swift"><code><span class="n">scenariosRequest</span><span class="o">.</span><span class="n">completion</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">customRefreshControl</span><span class="o">.</span><span class="nf">endRefreshing</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">willChange</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">beginUpdates</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">inserted</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">indexPath</span> <span class="o">=</span> <span class="kt">IndexPath</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Section</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">insertRows</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="n">indexPath</span><span class="p">],</span> <span class="nv">with</span><span class="p">:</span> <span class="o">.</span><span class="n">automatic</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">deleted</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">indexPath</span> <span class="o">=</span> <span class="kt">IndexPath</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Section</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">deleteRows</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="n">indexPath</span><span class="p">],</span> <span class="nv">with</span><span class="p">:</span> <span class="o">.</span><span class="n">automatic</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">moved</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">fromIndex</span><span class="p">,</span> <span class="n">toIndex</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">fromIndexPath</span> <span class="o">=</span> <span class="kt">IndexPath</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">fromIndex</span><span class="p">,</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Section</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">toIndexPath</span> <span class="o">=</span> <span class="kt">IndexPath</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">toIndex</span><span class="p">,</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Section</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">moveRow</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="n">fromIndexPath</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">toIndexPath</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">updated</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">indexPath</span> <span class="o">=</span> <span class="kt">IndexPath</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Section</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">reloadRows</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="p">[</span><span class="n">indexPath</span><span class="p">],</span> <span class="nv">with</span><span class="p">:</span> <span class="o">.</span><span class="n">automatic</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">scenariosRequest</span><span class="o">.</span><span class="n">didChange</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">endUpdates</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>If you need to retrieve the actual data (let&rsquo;s say from a <code>tableView(_:cellForRowAt:)</code> method, you can access the <code>entities</code> of the request, like so: <code>self.scenariosRequest.entities[indexPath.row] as? Scenario</code>.</p>
+
+<p>When you have extracted all the data needed, you need to create a <code>Request</code> through the <code>UploadManager</code> found in the <code>Requester</code>. That <code>Request</code> asks you to provide a <code>Scenario</code>, arr array of <code>StepFile</code>s for the captures and the <code>PropertyValueContainers</code>. The latter is just a pair of <code>Property</code> with the <code>Value</code> extracted. The creation of such <code>Request</code> looks like this: <code>requester.uploadManager.uploadRequest(with: strongContext.scenario, stepFiles: stepFiles, propertyValueContainers: strongContext.propertyValues)</code>.</p>
+<h1 id='user-interface-ibmcaptureuisdk' class='heading'>User Interface (IBMCaptureUISDK)</h1>
+
+<p>To display UI components, look at the <code>IBMCaptureUISDK</code>. On this SDK, you&rsquo;ll find every UI component to match an <code>Step</code> (except for a PropertyEditorStep). Basically, everything that you have to do to capture images and extract it&rsquo;s data, is instantiating the right <code>UIViewController</code> and presenting it on screen, usually pushing one after the other on a <code>UINavigationController</code> following the order of the <code>steps</code> property found on a <code>Scenario</code>.</p>
+
+<p>The available components to capture &amp; extract information are:</p>
+
+<ul>
+<li><code><a href="Classes/BarcodeCaptureViewController.html">BarcodeCaptureViewController</a></code></li>
+<li><code><a href="Classes/PhotoCaptureViewController.html">PhotoCaptureViewController</a></code></li>
+<li><code><a href="Classes/PassportCaptureViewController.html">PassportCaptureViewController</a></code></li>
+<li><code><a href="Classes/USDLCaptureViewController.html">USDLCaptureViewController</a></code></li>
+<li><code><a href="Classes/DocumentCaptureViewController.html">DocumentCaptureViewController</a></code></li>
+</ul>
+
+<p>There are two more UI components available for you to use:</p>
+
+<ul>
+<li><p><code><a href="Classes/ImageReviewViewController.html">ImageReviewViewController</a></code>: This <code>UIViewController</code> is used to accept/reject a capture. Every capture must be manually accepted before continuing. All the capturing <code>UIViewControllers</code> allow you to inject your custom <code>UIViewController</code> that conforms to the <code><a href="Protocols/ImageReviewer.html">ImageReviewer</a></code>. If you don&rsquo;t pass any custom instance, the SDK will use the <code><a href="Classes/ImageReviewViewController.html">ImageReviewViewController</a></code>.</p></li>
+<li><p><code><a href="Classes/OCRViewController.html">OCRViewController</a></code>: This <code>UIViewController</code> is used to perform <code>OCR</code> on an image. It has a rectangular view that you can drag around and resize. When you tap the <code>OCR</code> button, the <code>OCR</code> operation will be performed. This <code>UIViewController</code> requires an <code><a href="Protocols/OCREngine.html">OCREngine</a></code> to be injected on the <code>init</code>. You can use your own custom engine by conforming to the <code><a href="Protocols/OCREngine.html">OCREngine</a></code> protocol or use the <code>OCRTextEngine</code> found on the <code>IBMCaptureOCRSDK</code>.</p></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

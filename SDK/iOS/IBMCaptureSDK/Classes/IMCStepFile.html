@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMCStepFile Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/IMCStepFile" class="dashAnchor"></a>
+    <a title="IMCStepFile Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IBM Mobile Capture SDK</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IBMCaptureSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        IMCStepFile Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/IMCDataProviderManager.html">IMCDataProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestBuilder.html">IMCNetworkRequestBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestError.html">IMCNetworkRequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCRequesterFactory.html">IMCRequesterFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCStepFile.html">IMCStepFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionNumber">IBMCaptureSDKVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionString">IBMCaptureSDKVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IMCNetworkRequestErrorDomain">IMCNetworkRequestErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestErrorCode.html">IMCNetworkRequestErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCStepType.html">IMCStepType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCUploadState.html">IMCUploadState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCField.html">IMCField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCFile.html">IMCFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPersistentRequester.html">IMCPersistentRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPhotoCaptureStep.html">IMCPhotoCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCProperty.html">IMCProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequest.html">IMCRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequester.html">IMCRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCScenario.html">IMCScenario</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCSession.html">IMCSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCStep.html">IMCStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZone.html">IMCZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedDocumentCaptureStep.html">IMCZonedDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedField.html">IMCZonedField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>IMCStepFile</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">IMCStepFile</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="c1">/// Creates an IMCStepFile to relate an IMCStep with the captured images. The images should be NSURLs. This relationship is established in memory only,
+/// when you pass the IMCStepFiles to the IMCUploadManager, that relationship is created in core data and saved as expected.
+/// @param stepId The id of the IMCStep that will be used to identify to which step the files belong to
+/// @param fileURLs An aray of NSURLs to be linked to the step that matches the stepId
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithStepId</span><span class="p">:</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">stepId</span> <span class="nf">andFileURLs</span><span class="p">:</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">fileURLs</span><span class="p">;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">stepId</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">fileURLs</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCStepFile(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)IMCStepFile(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCStepFile(im)initWithStepId:andFileURLs:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithStepId:andFileURLs:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCStepFile(im)initWithStepId:andFileURLs:">-initWithStepId:andFileURLs:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an IMCStepFile to relate an IMCStep with the captured images. The images should be NSURLs. This relationship is established in memory only,
+when you pass the IMCStepFiles to the IMCUploadManager, that relationship is created in core data and saved as expected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">initWithStepId</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">stepId</span>
+                            <span class="nf">andFileURLs</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">fileURLs</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">stepId</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">andFileURLs</span> <span class="nv">fileURLs</span><span class="p">:</span> <span class="p">[</span><span class="kt">URL</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stepId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The id of the IMCStep that will be used to identify to which step the files belong to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURLs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An aray of NSURLs to be linked to the step that matches the stepId</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCStepFile(py)stepId"></a>
+                    <a name="//apple_ref/objc/Property/stepId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCStepFile(py)stepId">stepId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">stepId</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">stepId</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)IMCStepFile(py)fileURLs"></a>
+                    <a name="//apple_ref/objc/Property/fileURLs" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)IMCStepFile(py)fileURLs">fileURLs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">fileURLs</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fileURLs</span><span class="p">:</span> <span class="p">[</span><span class="kt">URL</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

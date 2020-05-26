@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OCREngine Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/OCREngine" class="dashAnchor"></a>
+    <a title="OCREngine Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IBM Mobile Capture SDK</a> (47% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IBMCaptureUISDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OCREngine Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BarcodeCaptureViewController.html">BarcodeCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DocumentCaptureViewController.html">DocumentCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageReviewViewController.html">ImageReviewViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageReviewViewController/DataExtractionStatus.html">– DataExtractionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OCRViewController.html">OCRViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PassportCaptureViewController.html">PassportCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PhotoCaptureViewController.html">PhotoCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RectangleDetectorViewController.html">RectangleDetectorViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RectangleDetectorViewController/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ShapeView.html">ShapeView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USDLCaptureViewController.html">USDLCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USDLCaptureViewController/Output.html">– Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USDLCaptureViewController/USDLTheme.html">– USDLTheme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageReviewer.html">ImageReviewer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OCREngine.html">OCREngine</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OCREngine</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">OCREngine</span></code></pre>
+
+                </div>
+              </div>
+            <p>Blueprint for an OCREngine. Anyone who wishes to inject it&rsquo;s own ORCEngine must conform to this protocol.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15IBMCaptureUISDK9OCREngineP13recognizeText2in10completionySo7UIImageC_ySSSgctF"></a>
+                    <a name="//apple_ref/swift/Method/recognizeText(in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15IBMCaptureUISDK9OCREngineP13recognizeText2in10completionySo7UIImageC_ySSSgctF">recognizeText(in:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">recognizeText</span><span class="p">(</span><span class="k">in</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
