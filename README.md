@@ -31,5 +31,3 @@ The sample application for iOS can be found [HERE]()
 To start building apps for Android follow the [Android Developer Guide]()
 
 The sample application for Android can be found [HERE]()
-
-[HERE]() you can find the SDK reference.
