@@ -1,4 +1,4 @@
-# IBM Automation Mobile Capture 3.1.0
+# IBM Automation Mobile Capture 3.2.0
 
 This repository serves as reference for the Automation Mobile Capture product's documentation.
 
@@ -16,9 +16,6 @@ Check the [Sizing] section in the [Installation and Deployment Guide]()
 
 Follow the [Administration Guide](admin/AMC_Administration_Guide.md)
 
-## Training for Apps users 
-
-Follow the [User Training Guide]()
 
 ## Building  Applications
 
