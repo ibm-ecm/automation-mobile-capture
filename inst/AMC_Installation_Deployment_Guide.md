@@ -22,6 +22,7 @@ The following table expresses the CPU requirement in terms of vCPU units. This m
 | Application Worker | 1    |
 | HTTP Static Server | 1    |
 | Attachments Worker | 1    |
+
 The underlying hardware should be of similar or better performance of one any of the following:
 * Intel® Xeon® 8171M 2.1GHz (Skylake)
 * Intel® Xeon® E5-2673 v4 2.3 GHz (Broadwell) 
