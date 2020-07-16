@@ -27,7 +27,8 @@ IBM Automation Mobile Capture is a platform which allows users to scan and captu
 
 - `Scenario Deep Linking` - A functionality which allows the user to open the mobile app at any given scenario.
 - `Smart Data Extraction` -  An implemention which allows the user to automatically extract data from a document using Machine Learning.
-
+- `Signature Confirmation` -  A feature which offers the possibility of  marking a page of a document as signed or not signed.
+- `Multiple-Page Document Scanning` - With this feature, a user can scan a multiple-page document from within the same step.
 
 ## Supported browsers for the Admin Console
 
@@ -50,10 +51,10 @@ The Admin Console represents a Web browser-based, graphical user interface appli
 
 ## Accessing the Admin Console
 
-To begin using the Admin Console, start one of the supported Web browsers for your local environment and access the URL provided to you at the moment of your IBM Mobile Capture user registration.
+To begin using the Admin Console, start one of the supported Web browsers in your local environment and access the URL provided to you at the moment of your IBM Mobile Capture user registration.
 
 - Insert the correct credentials in the **Email** and **Password** fields
-- Click the **Login** button.
+- Click the **Login** button
 
 You can use the **Remember me** checkbox for easier access in case of repeated workspace use.
 
@@ -78,7 +79,7 @@ Once you have managed to successfully login into the Admin Console, access the s
 
 - Click the **New Scenario** button
 - Insert a given scenario name
-- Click the **Create Scenario** button.
+- Click the **Create Scenario** button
 
 OBS: Note that in order to create a new scenario, the scenario name field can not be left empty.
 
@@ -115,17 +116,25 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 
 2) `Passport:` This step allows users to scan and capture data from a Passport or a Machine Readable Travel Document. Editing this step will also enable users to select what data parameters they wish to extract from this type of documents.
 
-3) `Document:` This step allows users to create a step for scanning a custom document and extracting data from custom fields. To do so:
+3) `Document:` This step allows users to scan a document with multiple pages, all from within the same step. To configure the step click the **Edit**  button and:
+
+- Select the number of pages which need to be scanned by selecting **Any** (if the number is unknown) or by insterting a specific number
+- Check/Uncheck the **Show capture preview screen after each page** box, in case of wanting to see a preview a each capture when using the mobile app
+- Check/Uncheck the **Allow user to import from device** box, in case of wanting to import the document/s from the mobile device
+
+
+4) `Page Inspector:` This step allows users to create a step for scanning a custom document and extracting data from custom fields. To do so:
 
 - Click the **Edit** button
 - Click the **Choose a file** button to upload a copy of the document you would like to scan (in PNG or PDF format) and click **Upload**
 - Create the areas you would like to extract data from, by dragging the cursor on the uploaded image
 - Fill in the **Zones** field/s with their corresponding name. These Zones also represent the Scenario Properties of this step
+- Check/Uncheck the **Allow user to import from device** box, in case of wanting to import the document from the mobile device.
+- Check/Uncheck the **Ask for signature confirmation** box, in case of wanting a to confirm a signature from the document.
 - Click the **Save** button
 
-OBS: By editing this step, the user can select or unselect the import from device feature.
 
-4) `Property Editor:` This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. To do so:
+5) `Property Editor:` This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. To do so:
 
 - Click the **Edit** button
 - Click the **Add Property** button
@@ -146,15 +155,16 @@ Currently, IBM Automation Mobile Capture, supports smart data extraction for the
 - Currency (USD, EUR, GBP, SAR)
 
 
-5)  `Barcode:` This step allows users the possibility of scanning a multitude of barcode formats.
+6)  `Barcode:` This step allows users the possibility of scanning a multitude of barcode formats.
 
 OBS: This step has no editing options.
 
-6)  `Photo:` This step allows users to take one or more photos as part of a scenario.
+7)  `Photo:` This step allows users to take one or more photos as part of a scenario. By editing this step, the user can:
 
-OBS: By editing this step, the user can select or unselect the Multi-Photo capture option as well as the import from device feature.
+- Check/Uncheck the **Allow user to import from device** box, in case of wanting to import the photo/s from the mobile device's gallery
+- Check/Uncheck the **Allow user to take multiple photos** box in case of wanting to capture multiple photos in this step.
 
-7)  `Data Provider:` This step is meant to support the use case of augmenting data with resort to an external data provider service. To do so:
+8)  `Data Provider:` This step is meant to support the use case of augmenting data with resort to an external data provider service. To do so:
 
 - Click the **Edit** button
 - Fill in the **URL** of the external data provider service
@@ -162,7 +172,7 @@ OBS: By editing this step, the user can select or unselect the Multi-Photo captu
 - Configure the **Response** properties
 - Click the **Save** button
 
-8)  `Upload:` This is a mandatory step which allows users to select an additional repository for uploading the extracted data and images of a given scenario. To do so:
+9)  `Upload:` This is a mandatory step which allows users to select an additional repository for uploading the extracted data and images of a given scenario. To do so:
 
 - Click the **Edit** button
 - Click the **Connection** drop-down list
