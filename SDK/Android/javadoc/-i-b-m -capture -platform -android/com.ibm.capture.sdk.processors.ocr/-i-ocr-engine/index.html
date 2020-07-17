@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>IOcrEngine - IBM Capture Platform Android</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">IBM Capture Platform Android</a>&nbsp;/&nbsp;<a href="../index.html">com.ibm.capture.sdk.processors.ocr</a>&nbsp;/&nbsp;<a href="./index.html">IOcrEngine</a><br/>
+<br/>
+<h1>IOcrEngine</h1>
+<code><span class="keyword">interface </span><span class="identifier">IOcrEngine</span></code>
+<p>Interface for an OCR engine for detecting text from an image</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="recognize-text.html">recognizeText</a></h4>
+</td>
+<td>
+<p>Get text from a Bitmap image</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">recognizeText</span><span class="symbol">(</span><span class="identifier" id="com.ibm.capture.sdk.processors.ocr.IOcrEngine$recognizeText(android.graphics.Bitmap, com.ibm.capture.sdk.processors.ocr.IOcrEngineCallback, kotlin.Boolean)/image">image</span><span class="symbol">:</span>&nbsp;<span class="identifier">Bitmap</span><span class="symbol">, </span><span class="identifier" id="com.ibm.capture.sdk.processors.ocr.IOcrEngine$recognizeText(android.graphics.Bitmap, com.ibm.capture.sdk.processors.ocr.IOcrEngineCallback, kotlin.Boolean)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-i-ocr-engine-callback/index.html"><span class="identifier">IOcrEngineCallback</span></a><span class="symbol">, </span><span class="identifier" id="com.ibm.capture.sdk.processors.ocr.IOcrEngine$recognizeText(android.graphics.Bitmap, com.ibm.capture.sdk.processors.ocr.IOcrEngineCallback, kotlin.Boolean)/granularResults">granularResults</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../com.ibm.capture.sdk.ocr/-mrz-ocr-engine/index.html">MrzOcrEngine</a></h4>
+</td>
+<td>
+<p>Class implementation of IOcrEngine for detecting passport MRZ text from a Bitmap</p>
+<code><span class="keyword">class </span><span class="identifier">MrzOcrEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IOcrEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../com.ibm.capture.sdk.ocr/-text-ocr-engine/index.html">TextOcrEngine</a></h4>
+</td>
+<td>
+<p>Class implementation of IOcrEngine for detecting text from a Bitmap</p>
+<code><span class="keyword">class </span><span class="identifier">TextOcrEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IOcrEngine</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMCRequest Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/IMCRequest" class="dashAnchor"></a>
+    <a title="IMCRequest Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IBM Mobile Capture SDK</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IBMCaptureSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        IMCRequest Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/IMCDataProviderManager.html">IMCDataProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestBuilder.html">IMCNetworkRequestBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequestError.html">IMCNetworkRequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCRequesterFactory.html">IMCRequesterFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCStepFile.html">IMCStepFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionNumber">IBMCaptureSDKVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IBMCaptureSDKVersionString">IBMCaptureSDKVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@IMCNetworkRequestErrorDomain">IMCNetworkRequestErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestErrorCode.html">IMCNetworkRequestErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCStepType.html">IMCStepType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IMCUploadState.html">IMCUploadState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCField.html">IMCField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCFile.html">IMCFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPersistentRequester.html">IMCPersistentRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPhotoCaptureStep.html">IMCPhotoCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCProperty.html">IMCProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequest.html">IMCRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCRequester.html">IMCRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCScenario.html">IMCScenario</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCSession.html">IMCSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCStep.html">IMCStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZone.html">IMCZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedDocumentCaptureStep.html">IMCZonedDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IMCZonedField.html">IMCZonedField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>IMCRequest</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCRequest</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="c1">/// The entities that the request has. This will be empty until the data has been downloaded from the server and stored locally.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">entities</span><span class="p">;</span>
+
+<span class="c1">/// This block is called as soon as the request finishes.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">completion</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span>
+<span class="c1">/// This block is called multiple times during the lifetime of the request. The progress is a float ranging from 0 to 1.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">progress</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">progress</span><span class="p">;</span>
+<span class="c1">/// This block is called if the request fails. The error returned will contain the cause of the failure.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">error</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+<span class="c1">/// This block is called if the request succeeds.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">success</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">success</span><span class="p">;</span>
+
+<span class="c1">/// This block is called before any change happens.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">willChange</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">willChange</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is inserted. The block will contain the inserted IMCEntity and the index where's been inserted to.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">inserted</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">inserted</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is deleted. The block will contain the deleted IMCEntity and the index where's been deleted from.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">deleted</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">deleted</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is moved. The block will contain the moved IMCEntity and the indexes where's been moved from and to.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">moved</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">moved</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is updated. The block will contain the updated IMCEntity and the index where's been updated.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">updated</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">updated</span><span class="p">;</span>
+<span class="c1">/// This block is called after all the changes have happened.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">didChange</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">didChange</span><span class="p">;</span>
+
+<span class="c1">/// This method triggers the request. Usually, this means setting up an NSFetchedResultsController in order to notify when there are changes in the model
+/// and trigger a network request to update the data.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">execute</span><span class="p">;</span>
+
+<span class="c1">/// Suspend any network request that's ongoing.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">suspend</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startReportingChanges</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">duplicate</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(py)entities"></a>
+                    <a name="//apple_ref/objc/Property/entities" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(py)entities">entities</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The entities that the request has. This will be empty until the data has been downloaded from the server and stored locally.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">entities</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)completion:"></a>
+                    <a name="//apple_ref/objc/Method/-completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)completion:">-completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called as soon as the request finishes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">completion</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">completion</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestCompletionBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)progress:"></a>
+                    <a name="//apple_ref/objc/Method/-progress:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)progress:">-progress:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called multiple times during the lifetime of the request. The progress is a float ranging from 0 to 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">progress</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">progress</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progress</span><span class="p">(</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestProgressBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)error:"></a>
+                    <a name="//apple_ref/objc/Method/-error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)error:">-error:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called if the request fails. The error returned will contain the cause of the failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">error</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestErrorBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)success:"></a>
+                    <a name="//apple_ref/objc/Method/-success:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)success:">-success:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called if the request succeeds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">success</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">success</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">success</span><span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestSuccessBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)willChange:"></a>
+                    <a name="//apple_ref/objc/Method/-willChange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)willChange:">-willChange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called before any change happens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">willChange</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">willChange</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">willChange</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestErrorBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)inserted:"></a>
+                    <a name="//apple_ref/objc/Method/-inserted:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)inserted:">-inserted:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called when an IMCEntity is inserted. The block will contain the inserted IMCEntity and the index where&rsquo;s been inserted to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">inserted</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">inserted</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)deleted:"></a>
+                    <a name="//apple_ref/objc/Method/-deleted:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)deleted:">-deleted:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called when an IMCEntity is deleted. The block will contain the deleted IMCEntity and the index where&rsquo;s been deleted from.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">deleted</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">deleted</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)moved:"></a>
+                    <a name="//apple_ref/objc/Method/-moved:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)moved:">-moved:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called when an IMCEntity is moved. The block will contain the moved IMCEntity and the indexes where&rsquo;s been moved from and to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">moved</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">moved</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)updated:"></a>
+                    <a name="//apple_ref/objc/Method/-updated:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)updated:">-updated:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called when an IMCEntity is updated. The block will contain the updated IMCEntity and the index where&rsquo;s been updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">updated</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">updated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)didChange:"></a>
+                    <a name="//apple_ref/objc/Method/-didChange:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)didChange:">-didChange:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This block is called after all the changes have happened.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">didChange</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">didChange</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">didChange</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestDidChangeBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)execute"></a>
+                    <a name="//apple_ref/objc/Method/-execute" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)execute">-execute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method triggers the request. Usually, this means setting up an NSFetchedResultsController in order to notify when there are changes in the model
+and trigger a network request to update the data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">execute</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">execute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)suspend"></a>
+                    <a name="//apple_ref/objc/Method/-suspend" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)suspend">-suspend</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Suspend any network request that&rsquo;s ongoing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">suspend</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">suspend</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)startReportingChanges"></a>
+                    <a name="//apple_ref/objc/Method/-startReportingChanges" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)startReportingChanges">-startReportingChanges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startReportingChanges</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startReportingChanges</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest(im)duplicate"></a>
+                    <a name="//apple_ref/objc/Method/-duplicate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest(im)duplicate">-duplicate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">duplicate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">duplicate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

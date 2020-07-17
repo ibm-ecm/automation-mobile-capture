@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Protocols" class="dashAnchor"></a>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">IBM Mobile Capture SDK</a> (41% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">IBMCaptureSDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/IMCDataProviderManager.html">IMCDataProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCNetworkRequestBuilder.html">IMCNetworkRequestBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCNetworkRequestError.html">IMCNetworkRequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCRequesterFactory.html">IMCRequesterFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCStepFile.html">IMCStepFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@IBMCaptureSDKVersionNumber">IBMCaptureSDKVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@IBMCaptureSDKVersionString">IBMCaptureSDKVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@IMCNetworkRequestErrorDomain">IMCNetworkRequestErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IMCNetworkRequestErrorCode.html">IMCNetworkRequestErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IMCStepType.html">IMCStepType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IMCUploadState.html">IMCUploadState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCField.html">IMCField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCFile.html">IMCFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkRequester.html">IMCNetworkRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCPersistentRequester.html">IMCPersistentRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCPhotoCaptureStep.html">IMCPhotoCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCProperty.html">IMCProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCRequest.html">IMCRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCRequester.html">IMCRequester</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCScenario.html">IMCScenario</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCSession.html">IMCSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCStep.html">IMCStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCUploadManager.html">IMCUploadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCZone.html">IMCZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCZonedDocumentCaptureStep.html">IMCZonedDocumentCaptureStep</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/IMCZonedField.html">IMCZonedField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCEntity"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCEntity" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCEntity">IMCEntity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Base protocol for the data exposed from the SDK.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCEntity</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Entity</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCField"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCField">IMCField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCField.</p>
+
+                        <a href="Protocols/IMCField.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCField</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Field</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCZonedField"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCZonedField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCZonedField">IMCZonedField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Descibes a Zoned Field.</p>
+
+                        <a href="Protocols/IMCZonedField.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCZonedField</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCField.html">IMCField</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ZonedField</span> <span class="p">:</span> <span class="kt">Field</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkDataRequest"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkDataRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkDataRequest">IMCNetworkDataRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkDataRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkDataRequest</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a></span><span class="o">&gt;</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">dataCompletion</span><span class="o">:</span><span class="p">(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestCompletionBlock">IMCNetworkDataRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">completion</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">dictionaryCompletion</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestDictionaryCompletionBlock">IMCNetworkDataRequestDictionaryCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">arrayCompletion</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkDataRequest.h@T@IMCNetworkDataRequestArrayCompletionBlock">IMCNetworkDataRequestArrayCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkDataRequest</span> <span class="p">:</span> <span class="kt">NetworkRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkDownloadRequest"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkDownloadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkDownloadRequest">IMCNetworkDownloadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkDownloadRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkDownloadRequest</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a></span><span class="o">&gt;</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">downloadCompletion</span><span class="o">:</span><span class="p">(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkDownloadRequest.h@T@IMCNetworkDownloadRequestCompletionBlock">IMCNetworkDownloadRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">completion</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkDownloadRequest</span> <span class="p">:</span> <span class="kt">NetworkRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkRequest"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkRequest">IMCNetworkRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkRequest</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">responseHeaders</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">completion</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestCompletionBlock">IMCNetworkRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">progress</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestProgressBlock">IMCNetworkRequestProgressBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">progress</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">error</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestErrorBlock">IMCNetworkRequestErrorBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">success</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequest.h@T@IMCNetworkRequestSuccessBlock">IMCNetworkRequestSuccessBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">success</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">resume</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">suspend</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancel</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkRequestAdapter"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkRequestAdapter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkRequestAdapter">IMCNetworkRequestAdapter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkRequestAdapter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkRequestAdapter</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">NSMutableURLRequest</span>  <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">adaptRequest</span><span class="p">:(</span><span class="n">NSMutableURLRequest</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">request</span>
+                                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">adapt</span><span class="p">(</span><span class="n">request</span><span class="o">:</span><span class="p">));</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkRequestAdapter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkRequestRecoverer"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkRequestRecoverer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkRequestRecoverer">IMCNetworkRequestRecoverer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkRequestRecoverer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkRequestRecoverer</span>
+
+<span class="c1">// this is useful for refreshing tokens, where after a failed request, the implementation can call token refresh and at the end call comletion(true) which will have the same request repeated on the network
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recoverRequest</span><span class="p">:(</span><span class="n">NSURLRequest</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">request</span>
+          <span class="nf">withResponse</span><span class="p">:(</span><span class="n">NSHTTPURLResponse</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">response</span>
+                 <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span>
+            <span class="nf">completion</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequestRecovererCompletionBlock">IMCNetworkRequestRecovererCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">recover</span><span class="p">(</span><span class="n">request</span><span class="o">:</span><span class="n">with</span><span class="o">:</span><span class="n">_</span><span class="o">:</span><span class="n">completion</span><span class="o">:</span><span class="p">));</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkRequestRecoverer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkRequester"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkRequester" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkRequester">IMCNetworkRequester</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkRequester.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkRequester</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">additionalHeaders</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequestAdapter.html">IMCNetworkRequestAdapter</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">requestAdapters</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequestRecoverer.html">IMCNetworkRequestRecoverer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">requestRecoverers</span><span class="p">;</span>
+
+<span class="c1">// request methods
+</span><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">dataRequestWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">parameters</span> <span class="nf">encoding</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a></span><span class="p">)</span><span class="nv">encoding</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">parameters</span><span class="o">:</span><span class="n">encoding</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">dataRequestWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">parametersArray</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">parametersArray</span> <span class="nf">encoding</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a></span><span class="p">)</span><span class="nv">encoding</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">parameters</span><span class="o">:</span><span class="n">encoding</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">downloadRequestWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">uploadRequestWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">data</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">data</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">data</span><span class="o">:</span><span class="p">));</span>
+
+<span class="c1">// vial methods
+</span><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">dataRequestVialWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">parameters</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">parameters</span> <span class="nf">encoding</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a></span><span class="p">)</span><span class="nv">encoding</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">requestVial</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">parameters</span><span class="o">:</span><span class="n">encoding</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">dataRequestVialWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">parametersArray</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">parameters</span> <span class="nf">encoding</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a></span><span class="p">)</span><span class="nv">encoding</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">requestVial</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">parameters</span><span class="o">:</span><span class="n">encoding</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">downloadRequestVialWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">requestVial</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">uploadRequestVialWithURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">url</span> <span class="nf">method</span><span class="p">:(</span><span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span><span class="p">)</span><span class="nv">method</span> <span class="nf">headers</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span><span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">headers</span> <span class="nf">data</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">data</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">requestVial</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="n">method</span><span class="o">:</span><span class="n">headers</span><span class="o">:</span><span class="n">data</span><span class="o">:</span><span class="p">));</span>
+
+<span class="c1">// request from vial
+</span><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkDataRequest.html">IMCNetworkDataRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">dataRequestWithRequestVial</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">requestVial</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkDownloadRequest.html">IMCNetworkDownloadRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">downloadRequestWithRequestVial</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">requestVial</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nf">uploadRequestWithRequestVial</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkUploadRequestVial.html">IMCNetworkUploadRequestVial</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">requestVial</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">request</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+
+<span class="c1">// error handler for any error generated by a network request
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setGlobalErrorHandler</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCNetworkRequester.h@T@IMCNetworkRequesterErrorBlock">IMCNetworkRequesterErrorBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">globalErrorHandler</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">invalidateSession</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkRequester</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkUploadRequest"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkUploadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkUploadRequest">IMCNetworkUploadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkUploadRequest</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequest.html">IMCNetworkRequest</a></span><span class="o">&gt;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkUploadRequest</span> <span class="p">:</span> <span class="kt">NetworkRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCProperty"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCProperty" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCProperty">IMCProperty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCProperty. An IMCProperty can be shared between steps &amp; fields. It&rsquo;s unique. It&rsquo;s used to
+relate a property with a value, like a key value pair.</p>
+
+                        <a href="Protocols/IMCProperty.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCProperty</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Property</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCPropertyValueContainer"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCPropertyValueContainer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCPropertyValueContainer">IMCPropertyValueContainer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Relates an IMCPropery with a value contained in an NSString.</p>
+
+                        <a href="Protocols/IMCPropertyValueContainer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCPropertyValueContainer</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PropertyValueContainer</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequest"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequest">IMCRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCRequest</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="c1">/// The entities that the request has. This will be empty until the data has been downloaded from the server and stored locally.
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">entities</span><span class="p">;</span>
+
+<span class="c1">/// This block is called as soon as the request finishes.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">completion</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestCompletionBlock">IMCRequestCompletionBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span>
+<span class="c1">/// This block is called multiple times during the lifetime of the request. The progress is a float ranging from 0 to 1.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">progress</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestProgressBlock">IMCRequestProgressBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">progress</span><span class="p">;</span>
+<span class="c1">/// This block is called if the request fails. The error returned will contain the cause of the failure.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">error</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestErrorBlock">IMCRequestErrorBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+<span class="c1">/// This block is called if the request succeeds.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">success</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestSuccessBlock">IMCRequestSuccessBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">success</span><span class="p">;</span>
+
+<span class="c1">/// This block is called before any change happens.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">willChange</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestWillChangeBlock">IMCRequestWillChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">willChange</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is inserted. The block will contain the inserted IMCEntity and the index where's been inserted to.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">inserted</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestInsertedBlock">IMCRequestInsertedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">inserted</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is deleted. The block will contain the deleted IMCEntity and the index where's been deleted from.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">deleted</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDeletedBlock">IMCRequestDeletedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">deleted</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is moved. The block will contain the moved IMCEntity and the indexes where's been moved from and to.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">moved</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestMovedBlock">IMCRequestMovedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">moved</span><span class="p">;</span>
+<span class="c1">/// This block is called when an IMCEntity is updated. The block will contain the updated IMCEntity and the index where's been updated.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">updated</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestUpdatedBlock">IMCRequestUpdatedBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">updated</span><span class="p">;</span>
+<span class="c1">/// This block is called after all the changes have happened.
+</span><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">didChange</span><span class="p">:(</span><span class="n"><a href="Type%20Definitions.html#/c:IMCRequest.h@T@IMCRequestDidChangeBlock">IMCRequestDidChangeBlock</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">didChange</span><span class="p">;</span>
+
+<span class="c1">/// This method triggers the request. Usually, this means setting up an NSFetchedResultsController in order to notify when there are changes in the model
+/// and trigger a network request to update the data.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">execute</span><span class="p">;</span>
+
+<span class="c1">/// Suspend any network request that's ongoing.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">suspend</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startReportingChanges</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">duplicate</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Request</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRequester"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCRequester" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRequester">IMCRequester</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCRequester.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCRequester</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="cm">/**
+ The IMCUploadManager that should be used to send data from the device to the server.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCUploadManager.html">IMCUploadManager</a></span><span class="o">&gt;</span> <span class="n">uploadManager</span><span class="p">;</span>
+
+<span class="cm">/**
+The IMCDataProviderManager that should be used to trigger processing for DataProviderSteps.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="Classes/IMCDataProviderManager.html">IMCDataProviderManager</a></span> <span class="o">*</span><span class="n">dataProviderManager</span><span class="p">;</span>
+
+<span class="cm">/**
+ Returns an IMCRequest that will contain all the available IMCScenarios.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequest.html">IMCRequest</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">scenariosRequest</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">scenariosRequest</span><span class="p">());</span>
+
+<span class="cm">/**
+ Returns an IMCRequest that will contain the IMCScenario that matches the IMCScenario passed as a parameter.
+ 
+ @param scenario The scenario that's going to be used to fetch.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequest.html">IMCRequest</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">scenarioRequestWithScenario</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCScenario.html">IMCScenario</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">scenario</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">scenarioRequest</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+
+<span class="cm">/**
+ Returns an IMCRequest that will contain the IMCScenario that matches the id passed as a parameter.
+ 
+ @param scenarioId The scenario id that's going to be used to fetch.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequest.html">IMCRequest</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nf">scenarioRequestWithScenarioId</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">scenarioId</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">scenarioRequest</span><span class="p">(</span><span class="n">with</span><span class="o">:</span><span class="p">));</span>
+
+<span class="cm">/**
+ Returns an IMCRequest that will contain all the available IMCSessions.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequest.html">IMCRequest</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">sessionsRequest</span> <span class="n">NS_SWIFT_NAME</span><span class="p">(</span><span class="n">sessionsRequest</span><span class="p">());</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Requester</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCPersistentRequester"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCPersistentRequester" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCPersistentRequester">IMCPersistentRequester</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCPersistentRequester.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCPersistentRequester</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequester.html">IMCRequester</a></span><span class="o">&gt;</span>
+
+<span class="cm">/**
+ Removes everything that's stored by the persistent requester.
+ */</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clearAllData</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PersistentRequester</span> <span class="p">:</span> <span class="kt">Requester</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCScenario"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCScenario" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCScenario">IMCScenario</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCScenario created on the admin console.</p>
+
+                        <a href="Protocols/IMCScenario.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCScenario</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Scenario</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCSession"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCSession" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCSession">IMCSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCSession. A session is an object created on the app that will be linked with a session on the server. It will contain the
+data that needs to be uploaded.</p>
+
+                        <a href="Protocols/IMCSession.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCSession</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Session</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCFile"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCFile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCFile">IMCFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Descibes an IMCFile.</p>
+
+                        <a href="Protocols/IMCFile.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCFile</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">File</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCStep">IMCStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCStep created on the admin console.</p>
+
+                        <a href="Protocols/IMCStep.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Step</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCPropertyEditorStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCPropertyEditorStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCPropertyEditorStep">IMCPropertyEditorStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Property Editor step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCPropertyEditorStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PropertyEditorStep</span> <span class="p">:</span> <span class="kt">Step</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Capture Step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CaptureStep</span> <span class="p">:</span> <span class="kt">Step</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCPhotoCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCPhotoCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCPhotoCaptureStep">IMCPhotoCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Photo Capture Step.</p>
+
+                        <a href="Protocols/IMCPhotoCaptureStep.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCPhotoCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PhotoCaptureStep</span> <span class="p">:</span> <span class="kt">CaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCRectangularCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCRectangularCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCRectangularCaptureStep">IMCRectangularCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Rectangular Capture Step.</p>
+
+                        <a href="Protocols/IMCRectangularCaptureStep.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCRectangularCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCCaptureStep">IMCCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">RectangularCaptureStep</span> <span class="p">:</span> <span class="kt">CaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCUSDLCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCUSDLCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCUSDLCaptureStep">IMCUSDLCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a United States Drivers License step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCUSDLCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">USDLCaptureStep</span> <span class="p">:</span> <span class="kt">RectangularCaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCMRZDocumentCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCMRZDocumentCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an MRZ step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCMRZDocumentCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MRZDocumentCaptureStep</span> <span class="p">:</span> <span class="kt">RectangularCaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCPassportCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCPassportCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCPassportCaptureStep">IMCPassportCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Passport step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCPassportCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCMRZDocumentCaptureStep">IMCMRZDocumentCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PassportCaptureStep</span> <span class="p">:</span> <span class="kt">MRZDocumentCaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCZonedDocumentCaptureStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCZonedDocumentCaptureStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCZonedDocumentCaptureStep">IMCZonedDocumentCaptureStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Zoned Document Capture step</p>
+
+                        <a href="Protocols/IMCZonedDocumentCaptureStep.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCZonedDocumentCaptureStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRectangularCaptureStep.html">IMCRectangularCaptureStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ZonedDocumentCaptureStep</span> <span class="p">:</span> <span class="kt">RectangularCaptureStep</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCBarcodeStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCBarcodeStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCBarcodeStep">IMCBarcodeStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Barcode step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCBarcodeStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">BarcodeStep</span> <span class="p">:</span> <span class="kt">Step</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCDataProviderStep"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCDataProviderStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCDataProviderStep">IMCDataProviderStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes a Barcode step</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCDataProviderStep</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCStep.html">IMCStep</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">DataProviderStep</span> <span class="p">:</span> <span class="kt">Step</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCUploadManager"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCUploadManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCUploadManager">IMCUploadManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCUploadManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCUploadManager</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
+
+<span class="c1">/// Creates an IMCRequest that will upload the IMCStepFiles and IMCPropertyValueContainers to the server. Internally it creates a new IMCSession.
+/// @param scenario The IMCScenario for which you want to upload the extracted data.
+/// @param stepFiles The compination of step and files that will be send to the server.
+/// @param propertyValueContainers The combination of IMCProperties with the values that the app has extracted.
+</span><span class="o">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCRequest.html">IMCRequest</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">uploadRequestWithScenario</span><span class="o">:</span><span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCScenario.html">IMCScenario</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">scenario</span>
+                                           <span class="n">stepFiles</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/IMCStepFile.html">IMCStepFile</a></span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">stepFiles</span>
+                             <span class="n">propertyValueContainers</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/IMCPropertyValueContainer.html">IMCPropertyValueContainer</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="n">propertyValueContainers</span><span class="p">;</span>
+
+<span class="c1">/// Start (or resume) the uploads if there are any pending.
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">resumeQueue</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">UploadManager</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCZone"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCZone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCZone">IMCZone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an IMCZone. The data should be in the rectangle that declares.</p>
+
+                        <a href="Protocols/IMCZone.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCZone</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)IMCEntity">IMCEntity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Zone</span> <span class="p">:</span> <span class="kt">Entity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkRequestVial"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkRequestVial" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkRequestVial">IMCNetworkRequestVial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkRequestVial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkRequestVial</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSCopying</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/IMCNetworkHTTPMethod.html">IMCNetworkHTTPMethod</a></span> <span class="n">method</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">headers</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">urlParameters</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">parameters</span><span class="p">;</span> <span class="c1">// NOTE: parameters and parametersArray is exclusive, there is only data on one of them
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">parametersArray</span><span class="p">;</span> <span class="c1">// NOTE: parameters and parametersArray is exclusive, there is only data on one of them
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/IMCNetworkRequestEncoding.html">IMCNetworkRequestEncoding</a></span> <span class="n">encoding</span><span class="p">;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/IMCNetworkRequestVialType.html">IMCNetworkRequestVialType</a></span> <span class="n">type</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkRequestVial</span> <span class="p">:</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSSecureCoding</span><span class="p">,</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkDataRequestVial"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkDataRequestVial" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkDataRequestVial">IMCNetworkDataRequestVial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkDataRequestVial</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a></span><span class="o">&gt;</span>
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkDataRequestVial</span> <span class="p">:</span> <span class="kt">NetworkRequestVial</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkDownloadRequestVial"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkDownloadRequestVial" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkDownloadRequestVial">IMCNetworkDownloadRequestVial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkDownloadRequestVial</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a></span><span class="o">&gt;</span>
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkDownloadRequestVial</span> <span class="p">:</span> <span class="kt">NetworkRequestVial</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)IMCNetworkUploadRequestVial"></a>
+                    <a name="//apple_ref/objc/Protocol/IMCNetworkUploadRequestVial" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)IMCNetworkUploadRequestVial">IMCNetworkUploadRequestVial</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/IMCNetworkUploadRequestVial.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">IMCNetworkUploadRequestVial</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/IMCNetworkRequestVial.html">IMCNetworkRequestVial</a></span><span class="o">&gt;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NetworkUploadRequestVial</span> <span class="p">:</span> <span class="kt">NetworkRequestVial</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>IBM 2019</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

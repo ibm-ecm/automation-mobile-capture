@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>IStep - IBM Capture Platform Android</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">IBM Capture Platform Android</a>&nbsp;/&nbsp;<a href="../index.html">com.ibm.capture.sdk.model</a>&nbsp;/&nbsp;<a href="./index.html">IStep</a><br/>
+<br/>
+<h1>IStep</h1>
+<code><span class="keyword">interface </span><span class="identifier">IStep</span></code>
+<p>Interface for defining a <a href="../-scenario/index.html">Scenario</a> step</p>
+<h3>Parameters</h3>
+<p><a name="id"></a>
+<code>id</code> - <ul><li>Id of the step</li>
+</ul>
+</p>
+<p><a name="title"></a>
+<code>title</code> - <ul><li>Title of the step</li>
+</ul>
+</p>
+<p><a name="type"></a>
+<code>type</code> - <ul><li>Type of the step String as received from the server</li>
+</ul>
+</p>
+<p><a name="stepFields"></a>
+<code>stepFields</code> - <ul><li>List of <a href="../-step-field/index.html">StepField</a> required for this step</li>
+</ul>
+</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="id.html">id</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="step-fields.html">stepFields</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">stepFields</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-step-field/index.html"><span class="identifier">StepField</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="title.html">title</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="type.html">type</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-i-barcode-step.html">IBarcodeStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for Barcode capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IBarcodeStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-data-provider-step.html">IDataProviderStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for an external Data Provider</p>
+<code><span class="keyword">interface </span><span class="identifier">IDataProviderStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-document-step/index.html">IDocumentStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for generic document capture. Includes a allowImportFromDevice value, representing the
+value on the server</p>
+<code><span class="keyword">interface </span><span class="identifier">IDocumentStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-driver-license-step.html">IDriverLicenseStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for Driver License capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IDriverLicenseStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-passport-step.html">IPassportStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for Passport capture</p>
+<code><span class="keyword">interface </span><span class="identifier">IPassportStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-photo-step/index.html">IPhotoStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for Photo capture. Include a cardinality to determine the number of required images,
+<a href="#">0</a> means an indefinite number of pictures.
+Also Includes a allowImportFromDevice value, representing the value on the server.</p>
+<code><span class="keyword">interface </span><span class="identifier">IPhotoStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-property-editor-step.html">IPropertyEditorStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for <a href="../-step-field/index.html">StepField</a> property editor</p>
+<code><span class="keyword">interface </span><span class="identifier">IPropertyEditorStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-i-upload-step.html">IUploadStep</a></h4>
+</td>
+<td>
+<p>Interface for an <a href="./index.html">IStep</a> for upload</p>
+<code><span class="keyword">interface </span><span class="identifier">IUploadStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../-stub-step/index.html">StubStep</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">StubStep</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">IStep</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

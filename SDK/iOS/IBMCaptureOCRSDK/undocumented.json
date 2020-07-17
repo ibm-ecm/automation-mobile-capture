@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vagrant/git/IBMCaptureOCRSDK/IBMCaptureOCRSDK/OCRTextEngine.swift",
+      "line": 19,
+      "symbol": "OCRTextEngine.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vagrant/git"
+}

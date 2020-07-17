@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ISession - IBM Capture Platform Android</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">IBM Capture Platform Android</a>&nbsp;/&nbsp;<a href="../index.html">com.ibm.capture.sdk.model</a>&nbsp;/&nbsp;<a href="./index.html">ISession</a><br/>
+<br/>
+<h1>ISession</h1>
+<code><span class="keyword">interface </span><span class="identifier">ISession</span></code>
+<p>Interface for a session performing a <a href="../-scenario/index.html">Scenario</a></p>
+<h3>Parameters</h3>
+<p><a name="id"></a>
+<code>id</code> - <ul><li>Id of the session</li>
+</ul>
+</p>
+<p><a name="scenarioId"></a>
+<code>scenarioId</code> - <ul><li>Id of the <a href="../-scenario/index.html">Scenario</a> used in this session</li>
+</ul>
+</p>
+<p><a name="scenarioPropertyValues"></a>
+<code>scenarioPropertyValues</code> - <ul><li>MutableMap&lt;Int, String&gt; Mapping session PropertyId to its PropertyValue</li>
+</ul>
+</p>
+<p><a name="scenarioFiles"></a>
+<code>scenarioFiles</code> - <ul><li>MutableMap&lt;Int, MutableMap&lt;Int, String&gt;?&gt; Mapping session Step id to a: Map of the position (Order of capture in the step) to the captured image's filepath</li>
+</ul>
+</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="completed.html">completed</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">completed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="id.html">id</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scenario-files.html">scenarioFiles</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">scenarioFiles</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scenario-id.html">scenarioId</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">scenarioId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scenario-property-values.html">scenarioPropertyValues</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">scenarioPropertyValues</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-session/index.html">Session</a></h4>
+</td>
+<td>
+<p>Data object <a href="./index.html">ISession</a></p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Session</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ISession</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
