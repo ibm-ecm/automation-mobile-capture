@@ -76,7 +76,7 @@ A scenario represents an assembly of steps, manually added together, to facilita
 
 ## Creating a scenario
 
-After you logged into the Admin Console, access the scenarios page by clicking the **Scenarios** button on the toolbar, this should be your default page when logged in. Do the following steps:
+After you logged in to the Admin Console, access the scenarios page by clicking the **Scenarios** button on the toolbar, this should be your default page when logged in. Do the following steps:
 
 1. Click the **New Scenario** button
 1. Insert a given scenario name
@@ -276,4 +276,3 @@ OBS: When connected to an LDAP server, this feature cannot be available.
 # 6. <u>LDAP integration</u>
 
 IBM Automation Mobile Capture supports integration with an LDAP server. As of version 3.1.0, this feature can only be accessible via a Kubernets deployment. 
-
