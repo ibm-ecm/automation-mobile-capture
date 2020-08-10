@@ -24,7 +24,7 @@ It includes the information specific to common Kubernetes providers beyond gener
 
 ### 2.1. Versions
 * Kubernetes >= v1.15 or OpenShift >= v3.11 as a deployment target
-* Helm v3.x.x installed on the machine you will deploy from
+* Helm v3.x.x installed on the machine you deploy from
 * PostgreSQL Server >= v10 reachable from the deployment cluster
 
 ### 2.2. Sizing
@@ -70,7 +70,7 @@ To connect with your Kubernetes cluster, you need to have _kubectl CLI_ installe
 If it is not the case, you can follow the instructions provided [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 ### Helm
-To deploy AMC you need to have Helm installed on the machine you are using to deploy.
+To deploy AMC, you need to have Helm installed on the machine you are using to deploy.
 
 Follow the instructions for your platform provided [here](https://helm.sh/docs/intro/install/).
 
@@ -88,7 +88,7 @@ Contact your cluster administrator to provide you with the required access instr
 
 #### Ingress Controller
 It is required to have an _Ingress Controller_ available on your cluster. AMC uses `Ingress` resources to configure access to the product.
-You should contact your cluster administrator in order to get information about this.
+You should contact your cluster administrator to get information about this.
 
 If you do not have a provisioned _Ingress Controller_ you can follow the instructions for [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/).
 Refer to the section for easy deployment using Helm.
@@ -96,7 +96,7 @@ Refer to the section for easy deployment using Helm.
 #### _PostgreSQL_ Server
 You need to provide a _PostgreSQL_ Server with version >= 10.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to access it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to access it.
 
 If you do not have one, and your deployment is on a standard certified Kubernetes cluster, there is an optional _Helm Chart_ dependency provided that deploys a third-party _PostgreSQL_ deployment alongside with AMC.
 
@@ -114,7 +114,7 @@ Contact your cluster administrator to provide you with the required instructions
 Due to security concerns, it is required that the server is reachable via HTTPS. 
 You'll need the provide the appropriate Secret with the TLS certificate for a valid domain.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to configure it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to configure it.
 
 If you already have a correctly configured public DNS zone that points to the cluster, you can install _cert-manager_, to issue and manage certificates automatically, provided by `Let's Encrypt`, following the instructions [here](https://cert-manager.readthedocs.io/en/latest/tutorials/acme/quick-start/index.html).
 
@@ -151,7 +151,7 @@ Replace `"$(openssl rand -base64 32)”` with your own password if you are conne
 
 #### `values.yaml` Configuration
 In the directory of the AMC _Helm Chart_ you can find a file named `values.yaml`.
-Use your editor of preference to edit and update the file so that its contents are according to the following template:
+Use your editor of preference to edit and update the file so that its contents remain according to the following template:
 ```yaml
 postgresql:
   existingSecret: mobilecapture-postgresql
@@ -204,7 +204,7 @@ postgresqlInternalServer:
 
 #### LDAP Configuration
 Under `ldap` set the values for:
-- `host`: LDAP server addresss.
+- `host`: LDAP server address.
 - `port`: LDAP server port.
 - `treebase`: The treebase where the user search can be done.
 - `emailAttribute`: The LDAP attribute where the user's email is stored.
@@ -227,9 +227,9 @@ ldap:
 
 #### Virtual Root Configuration
 If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path to on the configuration.
-This option does not serve AMC under a virtual root, but is needed in order to correctly generate links for inviting new users, reset password, upload endpoint URLs, etc.
+This option does not serve Automation Mobile Capture under a virtual root, but is needed in order to generate links correctly for inviting new users, reset password, upload endpoint URLs, etc.
 This value is used in conjunction with the value of hostname.
-The value must begin with a forward slash, and terminate without a trailing slash
+The value must begin with a forward slash, and terminate without a trailing slash.
 For example:
     - You employ a URL rewrite strategy to serve mobile capture at https://www.example.com/mobilecapture
     - Set the value of `hostname` to `www.example.com`
@@ -290,7 +290,7 @@ Refer to the section for easy deployment using Helm.
 #### _PostgreSQL_ Server
 You need to provide a _PostgreSQL_ Server with version >= 10.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to access it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to access it.
 
 If you do not have one, and your deployment is on a standard certified Kubernetes cluster, there is an optional _Helm Chart_ dependency provided that deploys a third-party _PostgreSQL_ deployment alongside with AMC.
 
@@ -301,7 +301,7 @@ For the deployment to function, the cluster must be able to provision a persiste
 To support dynamic provisioning, a StorageClass that provisions volumes in `RWX` mode must be made available.
 
 The easiest way to satisfy this on Azure AKS is to create an _Azure Files_ dynamic provisioner.
-Follow the instructions available [here](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv).
+Follow the instructions [here](https://docs.microsoft.com/en-us/azure/aks/azure-files-dynamic-pv).
 
 ---
 **NOTE**
@@ -314,7 +314,7 @@ You only need to follow the instructions up to, and including, [Create a persist
 Due to security concerns, it is required that the server is reachable via HTTPS. 
 You need to provide the appropriate Secret with the TLS certificate for a valid domain.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to configure it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to configure it.
 
 If you already have a correctly configured public DNS zone that points to the cluster, you can install _cert-manager_, to issue and manage certificates automatically, provided by `Let's Encrypt`, following the instructions [here](https://cert-manager.readthedocs.io/en/latest/tutorials/acme/quick-start/index.html).
 
@@ -391,7 +391,7 @@ uploadPersistence:
 ---
 **NOTE**
 
-Indentation on YAML files is important, please make sure you use the correct indentation spacing.
+Indentation on YAML files is important, make sure you use the correct indentation spacing.
 
 ---
 
@@ -450,7 +450,7 @@ virtualRoot: /mobilecapture
 ### 3.3. Amazon EKS
 
 #### kubectl
-To be able to connect with your Kubernetes cluster, you need to have _kubectl CLI_ installed on the machine you are using to deplkoy. If you are already managing a Kubernetes cluster, this should already be installed on your machine.
+To be able to connect with your Kubernetes cluster, you need to have _kubectl CLI_ installed on the machine you are using to deploy. If you are already managing a Kubernetes cluster, this should already be installed on your machine.
 
 If it is not the case, you can follow the instructions provided [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
@@ -479,15 +479,15 @@ For more information, refer to Amazon's User Guide [Create a kubeconfig for Amaz
 
 #### Ingress Controller
 It is required to have an _Ingress Controller_ available on your cluster. AMC uses `Ingress` resources to configure access to the product.
-You should contact your cluster administrator in order to get information about this.
+You should contact your cluster administrator to get information about this.
 
 If you do not have a provisioned _Ingress Controller_ you may follow the instructions for [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/).
-There is available a section for easy deployment using Helm.
+Refer the section for easy deployment using Helm.
 
 #### _PostgreSQL_ Server
 You need to provide a _PostgreSQL_ Server with version >= 10.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to access it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to access it.
 
 If you do not have one, and your deployment is on a standard certified Kubernetes cluster, there is an optional _Helm Chart_ dependency provided that deploys a third-party _PostgreSQL_ deployment alongside with AMC.
 
@@ -498,7 +498,7 @@ For this deployment to function, the cluster must be able to provision a persist
 To support dynamic provisioning, a StorageClass that provisions volumes in `RWX` mode must be made available.
 
 The easiest way to satisfy this is to integrate _Amazon EFS CSI driver_.
-Follow the instruction available [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html).
+Follow the instruction [here](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html).
 
 After deploying the #AMC _Helm Chart_ you might need to set the correct ownership on the volume provisioned by Amazon EFS to user id `1001` and group id `0` (`1001:0`).
 
@@ -506,20 +506,20 @@ After deploying the #AMC _Helm Chart_ you might need to set the correct ownershi
 **NOTE**
 
 To change ownership using Kubernetes:
-* Install [kubectl exec-as](https://github.com/jordanwilson230/kubectl-plugins/tree/krew#kubectl-exec-as)
-* List running _pods_ using `kubectl get pod`
-* Find pod named `<releasename>-mobile-capture-api-<pod identifier>`
-* `kubectl exec-as exec-as <releasename>-mobile-capture-api-<pod identifier>`
-* `bash-4.4$ chown 1001:0 /opt/app-root/src/public/uploads`
-* `bash-4.4$ exit`
+1. Install [kubectl exec-as](https://github.com/jordanwilson230/kubectl-plugins/tree/krew#kubectl-exec-as)
+1. List running _pods_ using `kubectl get pod`
+1. Find pod named `<releasename>-mobile-capture-api-<pod identifier>`
+1. `kubectl exec-as exec-as <releasename>-mobile-capture-api-<pod identifier>`
+1. `bash-4.4$ chown 1001:0 /opt/app-root/src/public/uploads`
+1. `bash-4.4$ exit`
 
 ---
 
 #### Domain and TLS Certificate
 Due to security concerns, it is required that the server is reachable via HTTPS. 
-You'll need to provide the appropriate Secret with the TLS certificate for a valid domain.
+You need to provide the appropriate Secret with the TLS certificate for a valid domain.
 
-Your cluster administrator should be able to provide you with additional information if this requirement is already satisfied and how to configure it.
+Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to configure it.
 
 If you already have a correctly configured public DNS zone that points to the cluster, you can install _cert-manager_, to issue and manage certificates automatically, provided by `Let's Encrypt`, following the instructions [here](https://cert-manager.readthedocs.io/en/latest/tutorials/acme/quick-start/index.html).
 
@@ -532,9 +532,9 @@ If the registry is private, you can configure the pull secrets required to pull 
 Contact your cluster administration for this information.
 
 #### Secrets
-These operations only need to be performed once, before the initial deployment.
+These operations only need to be used, before the initial deployment.
 
-Create image pull secret for the registry where the docker images are located at. This is dependent on where the images are stored, your cluster administrator should be able to assist you on this. Keep a note of the image pull secret name.
+Create image pull secret for the registry where the docker images are located. This is dependent on where the images are stored, your cluster administrator should be able to assist you on this. Keep a note of the image pull secret name.
 
 ##### Create secret key base secret
 ```bash
@@ -555,8 +555,8 @@ $ kubectl create secret generic mobilecapture-postgresql --from-literal=postgres
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
 #### `values.yaml` Configuration
-In the directory of the AMC _Helm Chart_ you will find a file named `values.yaml`.
-Use your editor of preference in order to update the file so that its contents are according to the following template:
+In the directory of the AMC _Helm Chart_ you can find a file named `values.yaml`.
+Use your editor of preference to edit the file so that its contents remain according to the following template:
 ```yaml
 postgresql:
   existingSecret: mobilecapture-postgresql
@@ -615,7 +615,7 @@ postgresqlInternalServer:
 
 #### LDAP Configuration
 Under `ldap` set the values for:
-- `host`: LDAP server addresss.
+- `host`: LDAP server address.
 - `port`: LDAP server port.
 - `treebase`: The treebase where the user search can be done.
 - `emailAttribute`: The LDAP attribute where the user's email is stored.
@@ -654,7 +654,7 @@ virtualRoot: /mobilecapture
 
 ## 4. Deploying
 
-Before deploying ensure that you have followed all [configuration instructions](#configuration).
+Before deploying, ensure that you have followed all [configuration instructions](#configuration).
 
 ### 4.1. New Deployment
 For new deployments execute on the terminal:
@@ -665,7 +665,7 @@ helm install mobilecapture .
 ---
 **NOTE**
 
-If you have installed _NGINX_ as your ingress controller you need patch the ingress resource in order to support bigger file upload size.
+If you have installed _NGINX_ as your ingress controller you need to patch the ingress resource to support bigger file upload size.
 ```bash
 kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotations":{"nginx.ingress.kubernetes.io/proxy-body-size":"50m"}}}'
 ```
@@ -675,7 +675,7 @@ kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotations
 ---
 **NOTE**
 
-If you have installed `cert-manager` as you also need to patch the ingress resource in order to have it configure the TLS certificate automatically.
+If you have installed `cert-manager` as you also need to patch the ingress resource to have it configure the TLS certificate automatically.
 ```bash
 $ kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotations":{"cert-manager.io/issuer":"letsencrypt-prod"}}}'
 
@@ -696,9 +696,9 @@ If you find an error, when upgrading, as such:
 
 > Error: UPGRADE FAILED: rendered manifests contain a resource that already exists. Unable to continue with update: StatefulSet "mc-ibm-demo-staging-postgresql" in namespace "default" exists and cannot be imported into the current release: invalid ownership metadata; label validation error: missing key "app.kubernetes.io/managed-by": must be set to "Helm"; annotation validation error: missing key "meta.helm.sh/release-name": must be set to "mc-ibm-demo-staging"; annotation validation error: missing key "meta.helm.sh/release-namespace": must be set to "default"
 
-This means you have previously installed the chart using Helm v2, and migrated to Helm v3. You only have to fix this once, and the following upgrades should work as expected, with no errors being presented.
+This means you have previously installed the chart using Helm v2, and migrated to Helm v3. You have to fix this only once, and the following upgrades should work as expected, with no errors being presented.
 
-To correct this proceed with the following on the terminal:
+To correct this, proceed with the following on the terminal:
 ```bash
 RESOURCE_TYPE=StatefulSet
 RESOURCE_NAME=mc-ibm-demo-staging-postgresql

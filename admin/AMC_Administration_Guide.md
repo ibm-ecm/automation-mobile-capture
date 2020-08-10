@@ -57,7 +57,7 @@ The Admin Console represents a Web browser-based, graphical user interface appli
 To begin using the Admin Console, start one of the supported Web browsers in your local environment and access the URL provided to you at the moment of your IBM Mobile Capture user registration. Do the following steps:
 
 1. Insert the correct credentials in the **Email** and **Password** fields
-1. Click the **Login** button
+1. Click **Login**
 
 You can use the **Remember me** checkbox for easier access in case of repeated workspace use.
 
@@ -76,11 +76,11 @@ A scenario represents an assembly of steps, manually added together, to facilita
 
 ## Creating a scenario
 
-After you logged in to the Admin Console, access the scenarios page by clicking the **Scenarios** button on the toolbar, this should be your default page when logged in. Do the following steps:
+After you logged in to the Admin Console, access the scenarios page by clicking **Scenarios** on the toolbar, this should be your default page when logged in. Do the following steps:
 
-1. Click the **New Scenario** button
+1. Click  **New Scenario**
 1. Insert a given scenario name
-1. Click the **Create Scenario** button
+1. Click **Create Scenario**
 
 OBS: Note that in order to create a new scenario, the scenario name field cannot be left empty.
 
@@ -106,7 +106,7 @@ The most configurable part of a scenario are its steps, which represent a select
 Do the following steps to add one or multiple steps to your scenario:
 
 1. Enter a given scenario
-1. Click the **Add Step** button
+1. Click **Add Step**
 1. Select an available step from the drop-down list
 
 You can **Edit** or **Delete** a step by clicking its corresponding buttons.
@@ -117,7 +117,7 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 
 2) `Passport:` This step allows you to scan and capture data from a Passport or a Machine Readable Travel Document. In this step you will be able to select what data parameters you want to extract from this type of documents.
 
-3) `Document:` This step allows you to scan a document with multiple pages, all from within the same step. To configure the step click the **Edit**  button and do the following steps:
+3) `Document:` This step allows you to scan a document with multiple pages, all from within the same step. To configure the step click **Edit** and do the following steps:
 
 1. Select the number of pages that need to be scanned by selecting **Any** (if the number is unknown) or by insterting a specific number
 1. Check or Uncheck the **Show capture preview screen after each page** box, in case of wanting to see a preview a each capture when using the mobile app
@@ -137,10 +137,10 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 
 5) `Property Editor:` This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. Do the following steps:
 
-1. Click the **Edit** button
-1. Click the **Add Property** button
+1. Click **Edit**
+1. Click **Add Property**
 1. Select any available Property from the drop-down list
-1. Click the **Save** button
+1. Click **Save**
 
 OBS: For adding a custom property select the **New Property** option and customize its name.
 
@@ -171,7 +171,7 @@ OBS: This step has no editing options.
 1. Fill in the **URL** of the external data provider service
 1. Configure the **Request** properties
 1. Configure the **Response** properties
-1. Click the **Save** button
+1. Click **Save**
 
 9)  `Upload:` This is a mandatory step, which allows you to select an additional repository for uploading the extracted data and images of a given scenario. To do so, do the following steps:
 
@@ -193,7 +193,7 @@ You can view in this page all the Properties of your Scenario, to access this pa
 This scenario subpage shows a history of every upload. You can see at a glance: the date and hour of the upload, the number of attachments and the status of the upload. To access this page, do the following steps:
 
 1. Enter a given scenario
-1. Click the **Uploads**
+1. Click **Uploads**
 
 OBS: If the Upload Step is configured for uploading into an external repository (in IBM Datacap or IBM Navigator), the content of each upload can be accessible only inside said repository.
 
@@ -221,8 +221,8 @@ OBS: When connected to an LDAP server, this feature cannot be available. This ac
 
 | User Role | Permissions |
 | --- | --- |
-| App user | Users that can only login in the mobile apps. |
-| Workspace User | Users that can login in the mobile apps as well as the Admin Console and have permissions to create scenarios and connections. |
+| App user | Users that can only log in in the mobile apps. |
+| Workspace User | Users that can log in in the mobile apps as well as the Admin Console and have permissions to create scenarios and connections. |
 | Workspace Admin | Users that also have the privilege to invite people to teams as well as create scenarios and connections. |
 | Platform Admin | Users that also have the privilege to create new workspaces. |
 
@@ -237,7 +237,7 @@ IBM Mobile Capture offers integrations with following file and data governance p
 
 IBM® Content Navigator is an easy to use web client for content management. IBM Content Navigator provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
 
-How to set up an IBM® Content Navigator integration:
+Do the following steps to set up an IBM® Content Navigator integration:
 
 1. Click on **Connections** on the toolbar
 1. Go to **New Connection** and select **IBM Navigator**
@@ -254,10 +254,10 @@ IBM® Datacap is a complete solution for data and documents, which helps you to 
 
 Do the following steps up an IBM® Datacap integration:
 
-1. Click on **Connections** button on the toolbar
+1. Click on **Connections** on the toolbar
 1. Go to **New Connection** and select **Datacap**
 1. Insert a Connection name and the credentials associated with your Datacap account
-1. Click the **Save** button
+1. Click **Save** 
 
 
 
