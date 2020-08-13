@@ -112,7 +112,7 @@ Contact your cluster administrator to provide you with the required instructions
 
 #### Domain and TLS Certificate
 Due to security concerns, it is required that the server is reachable via HTTPS. 
-You'll need the provide the appropriate Secret with the TLS certificate for a valid domain.
+You will need the provide the appropriate Secret with the TLS certificate for a valid domain.
 
 Your cluster administrator should be able to provide you the additional information if this requirement is already satisfied and how to configure it.
 
@@ -226,7 +226,7 @@ ldap:
 ```
 
 #### Virtual Root Configuration
-If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path to on the configuration.
+If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path on the configuration.
 This option does not serve Automation Mobile Capture under a virtual root, but is needed in order to generate links correctly for inviting new users, reset password, upload endpoint URLs, etc.
 This value is used in conjunction with the value of hostname.
 The value must begin with a forward slash, and terminate without a trailing slash.
@@ -382,7 +382,7 @@ tls:
   secret: <tls secret name>
 ```
 
-If you setup _Azure Files_ dynamic provisioner please set:
+If you setup _Azure Files_ dynamic provisioner set:
 ```yaml
 uploadPersistence:
   storageClass: azurefile
@@ -588,7 +588,7 @@ tls:
   secret: <tls secret name>
 ```
 
-If you setup _Amazon EFS CSI driver_ please up:
+If you setup _Amazon EFS CSI driver_  up:
 ```yaml
 uploadPersistence:
   existingClaim: efs-claim
@@ -598,7 +598,7 @@ uploadPersistence:
 ---
 **NOTE**
 
-Indentation on YAML files is important, please make sure you use the correct indentation spacing.
+Indentation on YAML files is important, make sure you use the correct indentation spacing.
 
 ---
 
