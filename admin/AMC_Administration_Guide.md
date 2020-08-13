@@ -27,7 +27,7 @@ IBM Automation Mobile Capture is a platform that allows you to capture data from
 
 - `Scenario Deep Linking` - This is a functionality that allows you to open the mobile app at any given scenario.
 
-- `Smart Data Extraction` -  This feature allows the user to extract data automatically from a document using Machine Learning.
+- `Smart Data Extraction` -  This feature allows you to extract data automatically from a document using Machine Learning.
 
 - `Signature Confirmation` -  This feature allows you to mark a page in a document as it is signed or not. 
 
@@ -135,7 +135,7 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 1. Click **Save**
 
 
-5) `Property Editor:` This step allows users to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. Do the following steps:
+5) `Property Editor:` This step allows you to verify and edit the extracted data of a scenario as well as manually adding data before uploading it to a given repository. Do the following steps:
 
 1. Click **Edit**
 1. Click **Add Property**
