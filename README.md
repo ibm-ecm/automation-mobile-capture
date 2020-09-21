@@ -22,9 +22,9 @@ Follow the [Administration Guide](admin/AMC_Administration_Guide.md)
 ### iOS 
 To start building apps for iOS follow the [iOS Developer Guide](SDK/iOS/DeveloperGuide.md)
 
-The sample application for iOS can be found [HERE]()
+The sample application for iOS can be found [HERE](SDK/iOS/Samples)
 
 ### Android
-To start building apps for Android follow the [Android Developer Guide]()
+To start building apps for Android follow the [Android Developer Guide](SDK/Android/README.md)
 
-The sample application for Android can be found [HERE]()
+The sample application for Android can be found [HERE](SDK/Android/Samples)
