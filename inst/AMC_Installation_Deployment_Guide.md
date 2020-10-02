@@ -11,8 +11,9 @@
     * [Azure AKS](#33-azure-aks)
     * [Amazon EKS](#34-amazon-eks)
 * [Deploying](#4-deploying)
-    * [New Deployment](#41-new-deployment)
-    * [Upgrading an existing deployment](#42-upgrading-an-existing-deployment)
+    * [Uploading your images](#41-uploading-your-images)
+    * [New Deployment](#42-new-deployment)
+    * [Upgrading an existing deployment](#43-upgrading-an-existing-deployment)
 * [Possible Errors](#5-possible-errors)
     * [Upgrading an existing deployment](#51-upgrading-an-existing-deployment)
 
@@ -895,7 +896,80 @@ virtualRoot: /mobilecapture
 
 Before deploying, ensure that you have followed all [configuration instructions](#configuration).
 
-### 4.1. New Deployment
+### 4.1 Uploading your images
+
+Your images need to be uploaded to a registry accessible by your cluster.
+
+#### Gather information
+
+To upload to a docker image registry service gather the following information:
+- Registry name (example: `quay.io`)
+- Repository names:
+  -  For `mobile-capture-api` image (example: `company/mobile-capture-api`)
+  - For `mobile-capture-static-file-server` image (example: `company/mobile-capture-static-file-server`)
+
+You also need the archive containing the docker images (example: `docker-images-269.tar.gz`).
+
+#### Load images locally
+
+Once you have this information, execute on the terminal:
+```bash
+docker load -i docker-images-269.tar.gz
+```
+Replacing `docker-images-269.tar.gz` with the appropriate image archive name.
+
+
+The output will have the format of 
+```bash
+Loaded image: ibm/mobile-capture-api:<api-image-tag>
+Loaded image: ibm/mobile-capture-static-file-server:<static-file-server-image-tag>
+```
+and will be similar to:
+```bash
+Loaded image: ibm/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+Loaded image: ibm/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+#### Tag images locally
+
+With this information, tag, for each image, with the new registry and repository names as follows:
+```bash
+docker tag ibm/mobile-capture-api:<api-image-tag> <destination registry name>/<api-image-destination-repository>:<api-image-tag>
+
+docker tag ibm/mobile-capture-static-file-server:<api-image-tag> <destination registry name>/<static-file-server-image-destination-repository>:<static-file-server-image-tag>
+```
+
+Example:
+```bash
+docker tag ibm/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d quay.io/company/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+
+docker tag ibm/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208 quay.io/company/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+#### Push images to registry
+
+Make sure you have logged in to your registry with the following command:
+```bash
+docker login <registry name>
+```
+Example:
+```bash
+docker login quay.io
+```
+
+Push the images to your registry:
+```bash
+docker push <destination registry name>/<api-image-destination-repository>:<api-image-tag>
+docker push <destination registry name>/<static-file-server-image-destination-repository>:<static-file-server-image-tag>
+```
+Example:
+```bash
+docker push quay.io/company/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+docker push quay.io/company/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+
+### 4.2. New Deployment
 For new deployments execute on the terminal:
 ```bash
 helm install mobilecapture .
@@ -922,7 +996,7 @@ $ kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotatio
 
 ---
 
-### 4.2. Upgrading an existing deployment
+### 4.3. Upgrading an existing deployment
 
 #### Backup your data
 
