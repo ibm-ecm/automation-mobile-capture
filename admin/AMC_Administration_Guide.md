@@ -33,7 +33,7 @@ IBM Automation Mobile Capture is a platform that allows you to capture data from
 
 - `Multiple-Page Document Scanning` - Using this feature, you can scan a multiple-page document from within the same step.
 
-- `Signature Recording and Placement` - This feature allows the users to record a signature and place over a document, by using the mobile app. 
+- `Signature Recording and Placement` - This feature allows you to record a signature and place it over a document, when using the mobile app. 
 
 ## Supported browsers for the Admin Console
 
@@ -131,7 +131,7 @@ You can **Edit** or **Delete** a step by clicking its corresponding buttons.
 1. Click **Edit**
 1. Click **Choose a file** to upload a copy of the document you would like to scan (in PNG or PDF format) and click **Upload**
 1. (Optional) Create the areas you would like to extract data from, by dragging the cursor on the uploaded document.
-1. (Optional) Set up signature zones by clicking the **Add Signature** button and drag them on the desired area of the document.
+1. (Optional) Set up signature zones by clicking **Add Signature** and drag them on the desired area of the document.
 1. Fill in the **Zones** field/s with their corresponding name. These Zones also represent the Scenario Properties of this step as well as the names of the signatures.
 1. Check or Uncheck the **Allow user to import from device** box, in case of wanting to import the document from the mobile device.
 1. Check or Uncheck the **Ask for signature confirmation** box, in case of wanting a to confirm a signature from the document.
