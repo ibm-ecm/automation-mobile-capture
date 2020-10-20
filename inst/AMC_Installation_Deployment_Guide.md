@@ -923,9 +923,81 @@ $ kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotatio
 ---
 
 ### 4.2. Upgrading an existing deployment
-For upgrading an existing deployment execute on the terminal:
+
+#### Backup your data
+
+##### Database
+
+Mobile Capture stores its configuration and metadata on a PostgreSQL database.
+
+Make sure you have an up-to-date backup of your database.
+
+##### Persistent Data Volumes
+
+Mobile Capture stores files on one Persistent Volume. Depending on how you configured your deployment you need to make sure you have an up-to-date backup of the volume.
+
+On a default deployment, the Persistent Volume Claim's name for the corresponding Persistent Volume is as follows:
+- `<helm release name>-mobile-capture-upload`
+
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+
+#### Tools
+
+##### Helm version
+
+Make sure you have installed on your machine *Helm v3*. 
+
+Previous releases could be installed using *Helm v2*, while the current release **requires** *Helm v3*.
+
+#### Upgrade from version 3.1.1
+
+##### Helm version upgrade preparation
+
+If your last deployment was performed using *Helm v2* and you installed the optional PostgreSQL chart dependency, you need to perform a simple update to your release before proceeding.
+
+To verify this, execute on a terminal:
 ```bash
-helm upgrade mobilecapture .
+kubectl get StatefulSet <helm release name>-postgresql -o jsonpath='{.metadata.labels.app\.kubernetes\.io/managed-by}'
+```
+
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+If `Helm` is printed as a result of the execution, then you may skip this step and continue with the upgrade instructions.
+
+If nothing or another values is printed, execute the following commands on a terminal:
+```bash
+RESOURCE_TYPE=StatefulSet
+RELEASE_NAME=<helm release name>
+RESOURCE_NAME=$RELEASE_NAME-postgresql
+NAMESPACE=default
+kubectl label $RESOURCE_TYPE $RESOURCE_NAME app.kubernetes.io/managed-by=Helm
+kubectl annotate $RESOURCE_TYPE $RESOURCE_NAME meta.helm.sh/release-name=$RELEASE_NAME
+kubectl annotate $RESOURCE_TYPE $RESOURCE_NAME meta.helm.sh/release-namespace=$NAMESPACE
+```
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+You only need to perform this update once when moving to *Helm v3*.
+
+##### Values.yaml configuration
+
+Use your previously configured `Values.yaml` file, configured for deployment of version 3.1.1, as a reference for editing the `Values.yaml` file contained in the new helm chart.
+
+Make sure you leave the image configuration entries intact on the new version (configurations under the `images` key).
+
+Added configurations:
+- _Segment Analytics configuration_
+
+Updated configurations:
+- _LDAP configuration_
+
+##### Upgrade Helm Chart
+
+Once you have backed up your data and validated your configurations you can upgrade your Helm chart deployment.
+
+To do this, execute on a terminal:
+```bash
+helm upgrade <helm release name> .
 ```
 
 ##  5. Possible Errors
