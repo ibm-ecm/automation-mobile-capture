@@ -147,7 +147,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
@@ -577,7 +577,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
@@ -790,7 +790,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
