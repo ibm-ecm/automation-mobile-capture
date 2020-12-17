@@ -1,70 +1,144 @@
-# Network, Data Model & Persistence (IBMCaptureSDK)
+# Mobile Capture SDK - Developer Guide
 
-The goal of the app is to work completely offline, allowing the user to complete scenarios that he had previously downloaded while not having connection. When a Scenario is finished, the app will try to send the data to the server. If it fails to do so, we will enqueue it so that the next time that the app has an active internet connection, we will proceed to send the data.
+## About
 
-The persistence of the authenticated user is handled on the App side (not the SDK). You must store the token returned by the SDK to keep the user logged in. In order to start any network request, you must have a `URL` that will be used to create a `NetworkRequestBuilder(baseURL: url, accessId: nil, accessSecretKey: nil`. When you have a fully constructed `NetworkRequestBuilder`, you can try to `networkRequestBuilder.authenticate(with: credential)` to recieve a fresh `sessionState`. The `credential` passed to the `networkRequestBuilder.authenticate(with: credential)` is a `URLCredential(user: username, password: password, persistence: .none)`.
+The Mobile Capture SKDs are a set of native iOS frameworks that help you to integrate *IBM Automation Mobile Capture* in your existing mobile app or to create a highly customized application from scratch.
 
-When you recieve the callback with the `sessionState`, you **must** store the value in `Keychain` in order to keep the user logged in once the app is killed. `NetworkRequestBuilder(baseURL: url, accessId: nil, accessSecretKey: nil, sessionState: sessionState)` has an `init` that accepts the mentioned `sessionState`. On every app launch, to keep the user logged in, you should retrieve the `sessionState` from the `Keychain` and create the `NetworkRequestBuilder` using that session, that way you don't have to ask the user to log in every time.
 
-Once you have a `NetworkRequestBuilder`, you can create a `Requester`, which at the time of this writing, you can build using `RequesterFactory`. The `PersistentRequester` needs a `NetworkRequestBuilder`, a `FileManager` and a `URL`. The `Requester` is the type that you will interact with to ask for `Request`s, which are the data types that encapsulate the logic to give you access to the data, start/cancel operations, react to changes in the persistence layer, etc.
+## Table of contents
+- [Requirements](#requirements)
+- [Integration](#integration)
+- [Capture](#capture)
+    - [Example](#example)
+- [Authentication](#authentication)
+- [Download Data](#download-data)
+- [Upload Results](#upload-results)
 
-For example, if you want to list the available scenarios, you would create a `Request` like this: `self.requester.scenariosRequest()`. This method returns a `Request` which allows you to add `closures` to it in order to react to changes. To trigger the start of the `scenariosRequest`, you need to call `execute()` on it, like so: `self.scenariosRequest.execute()`. Once you do that, a network request to fetch the scenarios will be trigger, and also you'll get updates, a completion, an error, etc. To access such notifications, you'd write something like this:
+## Requirements
+
+The Mobile Capture SDKs require iOS 13 or later as the minimum OS version.
+
+## Integration
+
+The Mobile Capture SDKs are organized in four different `xcframeworks` to help you to pick and choose only the functions that you need without affecting the size of your final application.
+
+The four `xcframeworks`:
+
+- `MobileCaptureSDK`: this SDK contains the models and the network layer. This SDK is required to use any of the other three. 
+- `MobileCaptureUISDK`: this SDK contains the `UIViewControllers` used to capture data from the camera and review the results.
+- `MobileCaptureProcessingSDK`: This SDK contains the logic to process the captured images and extract data from them. You should **not** be using this SDK directly. You should always use the MobileCaptureUISDK to capture and extract information.
+- `MobileCaptureOCRSDK`: This SDK contains the logic to perform OCR for a given image. This SDK requires Tesseract to be present on the project.
+
+To make the Mobile Capture SDKs available to your application, you need to  do the following steps:
+
+1. If you do not have a `Frameworks` group, create one on your project navigator:
+
+![Integration 1](Readme_assets/Integration_1.png)
+
+2. Drag and drop the needed SDKs to the `Frameworks` group:
+
+![Integration 2](Readme_assets/Integration_2.png)
+
+3. Make sure to mark "Copy items if needed" on Xcode's dialog:
+
+![Integration 3](Readme_assets/Integration_3.png)
+
+4. Go to Targets, Select your target, Click General. Make sure that the SDKs that you have dragged appear under `Frameworks, Libraries and Embedded Content` and that they are marked as "Embed & Sign":
+
+![Integration 4](Readme_assets/Integration_4.png)
+
+    Note:
+    1. If the SDKs do not appear under `Frameworks, Libraries and Embedded Content`, simply click on the "+" sign and select all of them from the popup.
+    2. If the SDKs appear as "Do Not Embed", make sure to change it to "Embed & Sign".
+
+5. Now you are ready to use them in your code.You  have to import what you need, for example:
 
 ```swift
-scenariosRequest.completion { [weak self] in
-    DispatchQueue.main.async {
-        self?.customRefreshControl.endRefreshing()
-    }
-}
-
-scenariosRequest.willChange { [weak self] in
-    self?.tableView.beginUpdates()
-}
-
-scenariosRequest.inserted { [weak self] (entity, index) in
-    let indexPath = IndexPath(row: index, section: Section.scenarios.rawValue)
-    self?.tableView.insertRows(at: [indexPath], with: .automatic)
-}
-
-scenariosRequest.deleted { [weak self] (entity, index) in
-    let indexPath = IndexPath(row: index, section: Section.scenarios.rawValue)
-    self?.tableView.deleteRows(at: [indexPath], with: .automatic)
-}
-
-scenariosRequest.moved { [weak self] (entity, fromIndex, toIndex) in
-    let fromIndexPath = IndexPath(row: fromIndex, section: Section.scenarios.rawValue)
-    let toIndexPath = IndexPath(row: toIndex, section: Section.scenarios.rawValue)
-    self?.tableView.moveRow(at: fromIndexPath, to: toIndexPath)
-}
-
-scenariosRequest.updated { [weak self] (entity, index) in
-    let indexPath = IndexPath(row: index, section: Section.scenarios.rawValue)
-    self?.tableView.reloadRows(at: [indexPath], with: .automatic)
-}
-
-scenariosRequest.didChange { [weak self] in
-    self?.tableView.endUpdates()
-}
+import IBMCaptureSDK
+import IBMCaptureUISDK
+import IBMCaptureOCRSDK
 ```
 
-If you need to retrieve the actual data (let's say from a `tableView(_:cellForRowAt:)` method, you can access the `entities` of the request, like so: `self.scenariosRequest.entities[indexPath.row] as? Scenario`.
+## Capture
 
-When you have extracted all the data needed, you need to create a `Request` through the `UploadManager` found in the `Requester`. That `Request` asks you to provide a `Scenario`, arr array of `StepFile`s for the captures and the `PropertyValueContainers`. The latter is just a pair of `Property` with the `Value` extracted. The creation of such `Request` looks like this: `requester.uploadManager.uploadRequest(with: strongContext.scenario, stepFiles: stepFiles, propertyValueContainers: strongContext.propertyValues)`.
+To capture information, you must use the `IBMCaptureUISDK` and choose the appropriate `UIViewController` for your needs. All these `UIViewController`s require that you inject a `Step` on the `init`. Since the required `Steps are protocols, you can conform to the needed protocol with your own custom implementation if you are not connecting to a server that would return you the correct instances.
 
-# User Interface (IBMCaptureUISDK)
+- **US Driver’s License**: Used to capture the front and back of a US driver’s license. The `UIViewController` needed is called `USDLCaptureViewController`. To instantiate this `UIViewController` you must pass an instance that conforms to `USDLCaptureStep`. When the user finished capturing the front and the back of the US driver’s license, the `completion` will be called with the output of the operation. It contains the front image, the back image and the extracted data.
 
-To display UI components, look at the `IBMCaptureUISDK`. On this SDK, you'll find every UI component to match an `Step` (except for a PropertyEditorStep). Basically, everything that you have to do to capture images and extract it's data, is instantiating the right `UIViewController` and presenting it on screen, usually pushing one after the other on a `UINavigationController` following the order of the `steps` property found on a `Scenario`.
+- **Passport**: Used to capture a passport. The `UIViewController` needed is called `PassportCaptureViewController`. To instantiate this `UIViewController` you must pass an instance that conforms to `PassportCaptureStep`. When the user finished capturing the passport and the data extraction was successful, the `completed` call-back is  called with the output of the operation. It contains the image and the extracted data.
 
-The available components to capture & extract information are:
+- **Barcode**: Used to capture a barcode. The `UIViewController` needed is called `BarcodeCaptureViewController`. To instantiate this `UIViewController` you must pass an instance that conforms to `BarcodeStep`. When the user finishes scanning the barcode, the `detectedBarcode` call-back  is called with the extracted data.
 
-- `BarcodeCaptureViewController`
-- `PhotoCaptureViewController`
-- `PassportCaptureViewController`
-- `USDLCaptureViewController`
-- `DocumentCaptureViewController`
+- **Document**: Used to capture a document that can have one or more pages. The `UIViewController` needed is called `MultipageDocumentViewController`. To instantiate this `UIViewController` you' must pass an instance that conforms to `MultipageDocumentCaptureStep`. Every time that the user captures and accepts (if needed) a page, the `capturedImage` call-back is called with the captured image. 
 
-There are two more UI components available for you to use:
+- **Page Inspector**: Used to capture a page from a document. The `UIViewController` needed is called `DocumentCaptureViewController`. To instantiate this `UIViewController` you must pass an instance that conforms to `ZonedDocumentCaptureStep`. When the user finished capturing the page of the document, the `capturedImages` call-back is called containing the original image and the processed one.
 
-- `ImageReviewViewController`: This `UIViewController` is used to accept/reject a capture. Every capture must be manually accepted before continuing. All the capturing `UIViewControllers` allow you to inject your custom `UIViewController` that conforms to the `ImageReviewer`. If you don't pass any custom instance, the SDK will use the `ImageReviewViewController`.
+- **Photo**: Used to capture a photo. The `UIViewController` needed is called `PhotoCaptureViewController`. To instantiate this `UIViewController` you must pass an instance that conforms to `PhotoCaptureStep`. Every time that the user captures an image, the `capturedImage` call-back is called with the captured image.
 
-- `OCRViewController`: This `UIViewController` is used to perform `OCR` on an image. It has a rectangular view that you can drag around and resize. When you tap the `OCR` button, the `OCR` operation will be performed. This `UIViewController` requires an `OCREngine` to be injected on the `init`. You can use your own custom engine by conforming to the `OCREngine` protocol or use the `OCRTextEngine` found on the `IBMCaptureOCRSDK`.
+As you might have noticed, most of these `UIViewControllers` have a parameter on the `init` that accepts a `UIViewController` that conforms to `IBMCaptureUISDK.ImageReviewer`. By default, implementation is used `ImageReviewViewController`, but you can provide your own custom implementation if you need further customization for the accept/reject screen.
+
+### Example
+
+To make the implementation easier, see the following example of how you would capture a Passport. The other `UIViewController`s behave similarly:
+
+```swift
+// If you're not connecting to the server you'll have to add your own
+// implementation that conforms to `PassportCaptureStep`. Otherwise,
+// you'll be able to get the correct `Step` from the `Scenario` that
+// you're currently using.
+let passportStep: PassportCaptureStep = YourPassportStepImplementation()
+let passportViewController = PassportViewController(step: passportStep)
+passportViewController.completed = { output in
+    // Do whatever you need with the image & data
+    let image = output.image
+    let data = output.extractedData
+}
+present(passportViewController, animated: true)
+```
+
+## Authentication
+
+To authenticate against a server, need to create a `NetworkRequestBuilder`. After you have an instance of it, you can  call the `IMCNetworkRequestBuilder.authenticate(with:completion:)` method. The parameter required for that method must be a `NSURLCredential.init(user:password:persistence:)` that has the username (email) and password of the user that is trying to log in.
+
+After the request is done, the `completion` is called, either with a `session` or an `error`. The `session` returned is a `JSON` containing all the user information. You need this `session` if you want to keep the user logged in, therefore, you should store the session in the Keychain to be retrieved later. `IMCNetworkRequestBuilder.init(baseURL:sessionState:)` is the method that you want to use if you wish to keep the user logged in, passing in the `session` that you saved  in the Keychain.
+
+
+## Download Data
+
+By using `NetworkRequestBuilder`,which you had previously created, you need to create a `Requester`. You can do so though the `IMCRequesterFactory.persistentRequester(with:fileManager:persistenceBaseURL:)` factory method. Keep this `Requester` around because you are going to use for all the requests.
+
+The `Requester` helps you to perform the following requests to retrieve data:
+
+- Fetch all scenarios: To retrieve all available scenarios, you must call `IMCRequester.scenariosRequest()`. The scenarios contains the basic information, to fetch all the information available you must fetch one by one, as explained in the point below.
+- Fetch a scenario based on the ID: To retrieve the details of a scenario, you must call `IMCRequester.scenarioRequest(with:)`. Once this request is completed, the scenario can have all the information available.
+- Fetch all sessions: To retrieve the sessions, you must call `IMCRequester.sessionsRequest()`.
+- Fetch a session based on the ID: To retrieve a single session, you must call `IMCRequester sessionRequest(with:)`.
+
+All this requests work the same way, see the following example on how to fetch all available scenarios:
+
+```swift
+let scenariosRequest = self.requester.scenariosRequest()
+        
+scenariosRequest.completion { [weak self] in
+    let scenarios = scenariosRequest.entities.compactMap { $0 as? Scenario }
+}
+
+scenariosRequest.error { error in
+    assertionFailure("Failed to download the scenarios: \(error.localizedDescription)")
+}
+
+scenariosRequest.execute()
+```
+
+The `entities` property of a `Request` is  populated once the completion is called. If you try to access that property before the `completion` is called, the array is empty. Make sure, to explore the available methods on `Request` because there are equivalent methods for an `NSFetchedResultsController`. In case that you want to display the scenarios on a `UI{Table/Collection}View`, progress, success, etc.
+
+## Upload Results
+
+When you completed capturing and extracting data, you might want to upload all the information to the server. To do that, you must use an `IMCUploadManager`. You need not to create one manually,  the `Requester` that you keep around has a property called `uploadManager` that you are going to use to send the data to the server.
+
+The `UploadManager` handles the uploads internally, retrying them when they fail. The method to enqueue an upload is `UploadManager.uploadRequest(with:stepFiles:propertyValueContainers:sessionId:)`, review the parameters required by this method:
+
+- `scenario`: The `Scenario` for which you are doing this upload.
+- `stepFiles`:  To know which captures belong to which `Step`, we need a way to relate them to one another. That achieves by using `StepFiles`. You can create this objects just before uploading. You can notice that the `init` of the `StepFile` asks for a `Step` and an array of `URL`s. That's because a `Step` can have multiple captures, and such captures need to be saved on disk.
+- `propertyValueContainers`: It behaves similarly to the `stepFiles`, it is a relationship between a `Property` and the value that was extracted. You can also create this before uploading, even though it is recommended to create it when you are extracting data and keep it around until the upload time.
+- `sessionId`: If you already have a `Session` that you want to upload the data to, pass the ID here that  is used for that. If you do not pass the `sessionId`, a new `Session` is  created.
