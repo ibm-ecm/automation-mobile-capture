@@ -257,7 +257,7 @@ Content Services are an easy to use web client for content management. Conected 
 Do the following steps to set up an IBM® Content Navigator integration:
 
 1.	Click **Connections** on the toolbar
-2.	Go to **New Connection** and select **IBM Navigator**
+2.	Go to **New Connection** and select **Content Services**
 3.	Insert a Connection name and the credentials associated with your repository
 4.	Click **Connect to Navigator** 
 5.	Select the repository were you want the data and images to be allocated
