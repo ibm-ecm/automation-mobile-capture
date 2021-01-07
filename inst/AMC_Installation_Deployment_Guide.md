@@ -11,8 +11,9 @@
     * [Azure AKS](#33-azure-aks)
     * [Amazon EKS](#34-amazon-eks)
 * [Deploying](#4-deploying)
-    * [New Deployment](#41-new-deployment)
-    * [Upgrading an existing deployment](#42-upgrading-an-existing-deployment)
+    * [Uploading your images](#41-uploading-your-images)
+    * [New Deployment](#42-new-deployment)
+    * [Upgrading an existing deployment](#43-upgrading-an-existing-deployment)
 * [Possible Errors](#5-possible-errors)
     * [Upgrading an existing deployment](#51-upgrading-an-existing-deployment)
 
@@ -146,7 +147,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
@@ -576,7 +577,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
@@ -789,7 +790,7 @@ $ kubectl create secret generic mobilecapture-admin-seed --from-literal=password
 ```
 ##### Create PostgreSQL database secret
 ```bash
-$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -base64 32)”
+$ kubectl create secret generic mobilecapture-postgresql --from-literal=postgresql-password="$(openssl rand -hex 32)”
 ```
 Replace `"$(openssl rand -base64 32)”` with your own password if you are connecting to an existing PostgreSQL server.
 
@@ -895,7 +896,80 @@ virtualRoot: /mobilecapture
 
 Before deploying, ensure that you have followed all [configuration instructions](#configuration).
 
-### 4.1. New Deployment
+### 4.1 Uploading your images
+
+Your images need to be uploaded to a registry accessible by your cluster.
+
+#### Gather information
+
+To upload to a docker image registry service gather the following information:
+- Registry name (example: `quay.io`)
+- Repository names:
+  -  For `mobile-capture-api` image (example: `company/mobile-capture-api`)
+  - For `mobile-capture-static-file-server` image (example: `company/mobile-capture-static-file-server`)
+
+You also need the archive containing the docker images (example: `docker-images-269.tar.gz`).
+
+#### Load images locally
+
+Once you have this information, execute on the terminal:
+```bash
+docker load -i docker-images-269.tar.gz
+```
+Replacing `docker-images-269.tar.gz` with the appropriate image archive name.
+
+
+The output will have the format of 
+```bash
+Loaded image: ibm/mobile-capture-api:<api-image-tag>
+Loaded image: ibm/mobile-capture-static-file-server:<static-file-server-image-tag>
+```
+and will be similar to:
+```bash
+Loaded image: ibm/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+Loaded image: ibm/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+#### Tag images locally
+
+With this information, tag, for each image, with the new registry and repository names as follows:
+```bash
+docker tag ibm/mobile-capture-api:<api-image-tag> <destination registry name>/<api-image-destination-repository>:<api-image-tag>
+
+docker tag ibm/mobile-capture-static-file-server:<api-image-tag> <destination registry name>/<static-file-server-image-destination-repository>:<static-file-server-image-tag>
+```
+
+Example:
+```bash
+docker tag ibm/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d quay.io/company/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+
+docker tag ibm/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208 quay.io/company/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+#### Push images to registry
+
+Make sure you have logged in to your registry with the following command:
+```bash
+docker login <registry name>
+```
+Example:
+```bash
+docker login quay.io
+```
+
+Push the images to your registry:
+```bash
+docker push <destination registry name>/<api-image-destination-repository>:<api-image-tag>
+docker push <destination registry name>/<static-file-server-image-destination-repository>:<static-file-server-image-tag>
+```
+Example:
+```bash
+docker push quay.io/company/mobile-capture-api:9d9954a1c13445b8177a47db9cb77181c8040f0d
+docker push quay.io/company/mobile-capture-static-file-server:b48314f7eeb17b308dbb5e93002cd12799a54208
+```
+
+
+### 4.2. New Deployment
 For new deployments execute on the terminal:
 ```bash
 helm install mobilecapture .
@@ -922,10 +996,82 @@ $ kubectl patch ingress/mobilecapture-mobile-capture -p '{"metadata":{"annotatio
 
 ---
 
-### 4.2. Upgrading an existing deployment
-For upgrading an existing deployment execute on the terminal:
+### 4.3. Upgrading an existing deployment
+
+#### Backup your data
+
+##### Database
+
+Mobile Capture stores its configuration and metadata on a PostgreSQL database.
+
+Make sure you have an up-to-date backup of your database.
+
+##### Persistent Data Volumes
+
+Mobile Capture stores files on one Persistent Volume. Depending on how you configured your deployment you need to make sure you have an up-to-date backup of the volume.
+
+On a default deployment, the Persistent Volume Claim's name for the corresponding Persistent Volume is as follows:
+- `<helm release name>-mobile-capture-upload`
+
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+
+#### Tools
+
+##### Helm version
+
+Make sure you have installed on your machine *Helm v3*. 
+
+Previous releases could be installed using *Helm v2*, while the current release **requires** *Helm v3*.
+
+#### Upgrade from version 3.1.1
+
+##### Helm version upgrade preparation
+
+If your last deployment was performed using *Helm v2* and you installed the optional PostgreSQL chart dependency, you need to perform a simple update to your release before proceeding.
+
+To verify this, execute on a terminal:
 ```bash
-helm upgrade mobilecapture .
+kubectl get StatefulSet <helm release name>-postgresql -o jsonpath='{.metadata.labels.app\.kubernetes\.io/managed-by}'
+```
+
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+If `Helm` is printed as a result of the execution, then you may skip this step and continue with the upgrade instructions.
+
+If nothing or another values is printed, execute the following commands on a terminal:
+```bash
+RESOURCE_TYPE=StatefulSet
+RELEASE_NAME=<helm release name>
+RESOURCE_NAME=$RELEASE_NAME-postgresql
+NAMESPACE=default
+kubectl label $RESOURCE_TYPE $RESOURCE_NAME app.kubernetes.io/managed-by=Helm
+kubectl annotate $RESOURCE_TYPE $RESOURCE_NAME meta.helm.sh/release-name=$RELEASE_NAME
+kubectl annotate $RESOURCE_TYPE $RESOURCE_NAME meta.helm.sh/release-namespace=$NAMESPACE
+```
+Where `<helm release name>` is replaced by the name you have given to the helm release when deploying.
+
+You only need to perform this update once when moving to *Helm v3*.
+
+##### Values.yaml configuration
+
+Use your previously configured `Values.yaml` file, configured for deployment of version 3.1.1, as a reference for editing the `Values.yaml` file contained in the new helm chart.
+
+Make sure you leave the image configuration entries intact on the new version (configurations under the `images` key).
+
+Added configurations:
+- _Segment Analytics configuration_
+
+Updated configurations:
+- _LDAP configuration_
+
+##### Upgrade Helm Chart
+
+Once you have backed up your data and validated your configurations you can upgrade your Helm chart deployment.
+
+To do this, execute on a terminal:
+```bash
+helm upgrade <helm release name> .
 ```
 
 ##  5. Possible Errors

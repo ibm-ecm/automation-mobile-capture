@@ -1,4 +1,4 @@
-# IBM Automation Mobile Capture 3.2.0
+# IBM Automation Mobile Capture 3.4.0
 
 This repository serves as reference for the Automation Mobile Capture product's documentation.
 
