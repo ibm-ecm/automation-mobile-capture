@@ -232,24 +232,44 @@ OBS: When connected to an LDAP server, only the App User and Workspace Admin rol
 
 IBM Mobile Capture offers integrations with following file and data governance products.
 
-## IBM® Content Navigator Integration
+## FileNet Integration
 
-IBM® Content Navigator is an easy to use web client for content management. IBM Content Navigator provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+Filenet is an easy to use web client for content management. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
 
 Do the following steps to set up an IBM® Content Navigator integration:
 
 1.	Click **Connections** on the toolbar
-2.	Go to **New Connection** and select **IBM Navigator**
+2.	Go to **New Connection** and select **FileNet**
 3.	Insert a Connection name and the credentials associated with your repository
 4.	Click **Connect to Navigator** 
 5.	Select the repository were you want the data and images to be allocated
 6.	Click  **Save** 
 
+To create a connection to a specific IBM Navigator desktop, specifiy the desired desktop in the Navigator URL using the following fromat `/navigator/?desktop=desktopname`
+
+
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
 
-## IBM® Datacap integration
+## Content Services Integration
 
-IBM® Datacap is a complete solution for data and documents, which helps you to streamline the capture, recognition and classification of business documents and extract important information.
+Content Services are an easy to use web client for content management. Conected to IBM Navigator on Cloud it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+
+Do the following steps to set up an IBM® Content Navigator integration:
+
+1.	Click **Connections** on the toolbar
+2.	Go to **New Connection** and select **Content Services**
+3.	Insert a Connection name and the credentials associated with your repository
+4.	Click **Connect to Navigator** 
+5.	Select the repository were you want the data and images to be allocated
+6.	Click  **Save** 
+
+To create a connection to a specific IBM Navigator on Cloud desktop, specifiy the desired desktop in the Navigator URL using the following fromat `/navigator/?desktop=desktopname`
+
+OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file
+
+## Datacap integration
+
+Datacap is a complete solution for data and documents, which helps you to streamline the capture, recognition and classification of business documents and extract important information.
 
 Do the following steps to set up an IBM® Datacap integration:
 
