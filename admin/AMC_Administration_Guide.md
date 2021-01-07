@@ -234,9 +234,9 @@ IBM Mobile Capture offers integrations with following file and data governance p
 
 ## FileNet Integration
 
-Filenet is an easy to use web client for content management. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+FileNet is a powerful enterprise content management system. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
 
-Do the following steps to set up an IBM® Content Navigator integration:
+Do the following steps to set up an IBM® Content Navigator (with FileNet) integration:
 
 1.	Click **Connections** on the toolbar
 2.	Go to **New Connection** and select **FileNet**
@@ -295,6 +295,6 @@ OBS: When connected to an LDAP server, this feature cannot be available.
 
 # 6. <u>LDAP integration</u>
 
-IBM Automation Mobile Capture supports integration with an LDAP server. As of version 3.1.0, this feature can only be accessible via a Kubernets deployment. 
+IBM Automation Mobile Capture supports integration with an LDAP server. As of version 3.1.0, this feature can only be accessible via a Kubernets deployment. Refer to the opportune guide to install Automation Mobile Capture with LDAP support.
 
 
