@@ -111,13 +111,13 @@ dependencies {
     implementation('com.squareup.retrofit2:retrofit:2.3.0') {
         exclude module: 'okhttp'
     }
-    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
-    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.14.9'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.9'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'androidx.exifinterface:exifinterface:1.0.0'
 
     implementation 'android.arch.work:work-runtime:1.0.0-alpha11'
@@ -248,7 +248,11 @@ Note that in order to create the `PassportCaptureStepFragment` and `ChooseTextIn
 
 After creating the fragment, you need to set an object that implements `StepOutputListener` interface,  receives callbacks from the fragment of the captured images and extracted data. Once the callback is called, you can update the UI and remove the `BaseStepFragment`.
 
+- **US Drivers License**: Used to capture the front and back of a US drivers license. The required `Fragment` is called `CaptureDriverLicenseStepFragment`. To instantiate this `BaseStepFragment` you must pass an instance of type `DriverLicenseStep`. After you finished capturing the driver's license and confirm the capture, the `onSuccess` callback  is called containing the captured images.
+
 - **Passport**: Used to capture a passport. The `Fragment` needed is called `PassportCaptureStepFragment`. To instantiate this `BaseStepFragment` you must pass an instance of type `PassportStep`. After you finished capturing the passport, the data extraction  is successful and you need to confirm the capture. The `onSuccess()` callback is called with the output of the operation. It contains the image and the extracted data.
+
+- **Barcode**: Used to capture a barcode. The required `Fragment` is called `BarcodeCaptureStepFragment`. To instantiate this `BaseStepFragment` you must pass an instance of type `BarcodeStep`. After you finished scanning the barcode, the `onSuccess()` callback is called containing the extracted data.
 
 - **Document**: Used to capture a document that can have one or more pages. The required `Fragment` is called `MultipageDocumentStepFragment`. To instantiate this `BaseStepFragment` you must pass an instance of type `MultipageDocumentStep`. After you capture and accept all the multiple captures, the `onSuccess()` callback is called with the captured image. You can set the `MultipageDocumentStep` to show a confirmation screen after each capture by setting the Constructor parameter `presentCaptureConfirmation = true`.
 
@@ -272,6 +276,25 @@ As these fragments use the camera of the device, your app should request the use
 ```
 
 Request the permission before showing the fragments, using the Android runtime permissions framework: [Request App Permissions](https://developer.android.com/training/permissions/requesting)
+
+In order to allow moving back within the step fragment (capture and confirm screens) using the device's Back button, you will need to pass the back button press event from the activity
+to the `BaseStepFragment`, example implementation:
+
+```
+override fun onBackPressed() {
+        val manager = supportFragmentManager
+        val fragment = // Get the fragment from the FragmentManager
+        if (fragment is BaseStepFragment) {
+            if (!fragment.onBackClicked()) {
+                super.onBackPressed()
+            }
+        } else {
+        	  // The Activity will handle the back press
+            super.onBackPressed()
+        }
+    }
+```
+
 
 <a name="example"></a>
 ### Example
@@ -349,7 +372,7 @@ lateinit var capturePlatformApi: CapturePlatformApi
 
 ```
 
-2. Add the AndroidManifest.xml in the application section:
+2. Add the following <provider> tag inside the AndroidManifest.xml <application> tag:
 
 ```
 <application
@@ -367,9 +390,10 @@ lateinit var capturePlatformApi: CapturePlatformApi
 
 
 
-After you have an instance of it, you can now call `capturePlatformApi.authenticate(<SERVER_URL>, <USERNAME>, <PASSWORD>)` method to authenticate the user. The parameters that are required for that method must be the username (email), password and server url of the user that's trying to log in.
+After you have an instance of it, you can now call `capturePlatformApi.authenticate(<SERVER_URL>, <USERNAME>, <PASSWORD>, <CLIENT_ID>)` method to authenticate the user. The parameters that are required for that method must be the username (email), password, server url of the user that's trying to log in and the clientId of the app.
+Use `HqBAohGaMFz8HrJMcsDy9aMVLihdkcwNy7mtO4U96MQ` as the `<CLIENT_ID>` in the above `capturePlatformApi.authenticate()` call.
 
-You stay logged in until ```capturePlatformApi.logOut()``` is called.
+You stay logged in until `capturePlatformApi.logOut()` is called.
 
 <a name="download-data"></a>
 ## Download Data

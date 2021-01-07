@@ -98,7 +98,7 @@ present(passportViewController, animated: true)
 
 ## Authentication
 
-To authenticate against a server, need to create a `NetworkRequestBuilder`. After you have an instance of it, you can  call the `IMCNetworkRequestBuilder.authenticate(with:completion:)` method. The parameter required for that method must be a `NSURLCredential.init(user:password:persistence:)` that has the username (email) and password of the user that is trying to log in.
+To authenticate against a server, need to create a `NetworkRequestBuilder` with the server URL and the `clientId` as `HqBAohGaMFz8HrJMcsDy9aMVLihdkcwNy7mtO4U96MQ`. After you have an instance of it, you can  call the `IMCNetworkRequestBuilder.authenticate(with:completion:)` method. The parameter required for that method must be a `NSURLCredential.init(user:password:persistence:)` that has the username (email) and password of the user that is trying to log in.
 
 After the request is done, the `completion` is called, either with a `session` or an `error`. The `session` returned is a `JSON` containing all the user information. You need this `session` if you want to keep the user logged in, therefore, you should store the session in the Keychain to be retrieved later. `IMCNetworkRequestBuilder.init(baseURL:sessionState:)` is the method that you want to use if you wish to keep the user logged in, passing in the `session` that you saved  in the Keychain.
 
