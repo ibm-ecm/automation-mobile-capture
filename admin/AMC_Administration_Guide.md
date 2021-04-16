@@ -298,13 +298,15 @@ Do the following steps to set up an IBM® Content Navigator (with FileNet) integ
 2.	Go to **New Connection** and select **FileNet**
 3.	Insert a Connection name and the credentials associated with your repository
 4.	Click **Connect to Navigator** 
-5.	Select the repository where you want the data and images to be allocated
-6.	Click  **Save** 
+5. Attach a certificate file, if required
+6.	Select the repository where you want the data and images to be allocated
+7.	Click  **Save** 
 
 To create a connection to a specific IBM Navigator desktop, specify the desired desktop in the Navigator URL using the following format `/navigator/?desktop=desktopname`
 
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
+OBS: The ertificate file needs to be in .pem format
 OBS: All properties uploaded to FileNet need to be configured as strings.
 
 
@@ -318,12 +320,14 @@ Do the following steps to set up an IBM® Content Navigator integration:
 2.	Go to **New Connection** and select **Content Services**
 3.	Insert a Connection name and the credentials associated with your repository
 4.	Click **Connect to Navigator** 
-5.	Select the repository where you want the data and images to be allocated
-6.	Click  **Save** 
+5. Attach a certificate file, if required
+6.	Select the repository where you want the data and images to be allocated
+7.	Click  **Save** 
 
 To create a connection to a specific IBM Navigator on Cloud desktop, specify the desired desktop in the Navigator URL using the following format `/navigator/?desktop=desktopname`
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
+OBS: The ertificate file needs to be in .pem format
 OBS: All properties uploaded to FileNet need to be configured as strings.
 
 ## Datacap integration
