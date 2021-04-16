@@ -30,7 +30,7 @@ IBM Automation Mobile Capture is a platform that helps you to scan and capture d
 - `Signature Confirmation` -  This feature allows you to mark a page in a document as it is signed or not. 
 - `Multiple-Page Document Scanning` - Using this feature, you can scan a multiple-page document within the same step. 
 - `Liveness Verification` - This is a feature that offers you the possibility of verifying an app user's identity by using active liveness detection.
-- `Receipt Capture` - This feature allows you to scan and capture and extract different information from a receipt. 
+- `Receipt Capture` - This feature allows you to scan, capture, and extract different information from a receipt. 
 
 
 
@@ -69,7 +69,7 @@ OBS: When connected to an LDAP or OIDC server, insert valid credentials associat
 
 In case of a forgotten password, click the **Forgot your Password?** link and follow the indicated instructions to reset your password.
 
-OBS: When connected to an LDAP or OIDC  server, you need to reset the password function within the LDAP or OIDC server configuration.
+OBS: When connected to an LDAP or OIDC  server, you need to reset the password function from within the LDAP or OIDC server configuration.
 
 
 
@@ -263,7 +263,7 @@ To assign a role to a user that has not accessed the platform:
 3. Select a new user role from the dropdown menu
 4. Click **Save**
 
-To modify to a role to a active user of the platform:
+To modify a role to a active user of the platform:
 
 1. Access the Team page, here you will see all users who accessed the platform.
 2. Click on the current role of a user and select a new one from the drop-down list.
