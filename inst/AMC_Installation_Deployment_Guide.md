@@ -167,6 +167,7 @@ images:
     registry: <registry where the docker image is>
     repository: ibm/mobile-capture-static-file-server
 existingSecret: mobilecapture
+authentication: internal
 seed:
   adminUser:
     username: 'admin@ibm.com'
@@ -216,6 +217,7 @@ Under `ldap` set the values for:
 - `ldapsCertificateLocation`: LDAPS certificate file location, in PEM format, relative to the Chart's root. If LDAPS is active, this field should contain the LDAP over SSL server’s public certificate in PEM format (.pem), the path is relative to the helm chart’s root directory. It validates the server's authenticity against this certificate. It can be a CA root certificate, or a self-signed certificate. If you save the public certificate named as `ldaps_cert.pem` and copy it to the same directory as the helm chart, the content of `ldapsCertificateLocation`  should be `ldaps_cert.pem`.
 
 ```yaml
+authentication: internal
 ldap:
   host: <ldap host>
   port: <ldap port>
@@ -226,6 +228,10 @@ ldap:
   enableLDAPS: <true/false>
   ldapsCertificateLocation: 'certificate.pem'
 ```
+
+#### External OpenID Connect Configuration
+
+Read instructions [here](AMC_OIDC_Configuration_Guide.md) on how to configure an external OIDC Provider as an authentication provider.
 
 #### Virtual Root Configuration
 If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path on the configuration.
@@ -395,6 +401,7 @@ images:
     registry: <registry where the docker image is>
     repository: ibm/mobile-capture-static-file-server
 existingSecret: mobilecapture
+authentication: internal
 seed:
   adminUser:
     username: 'admin@ibm.com'
@@ -447,6 +454,7 @@ If LDAPS is active, this field should contain the LDAP over SSL server’s publi
 
 
 ```yaml
+authentication: internal
 ldap:
   host: <ldap host>
   port: <ldap port>
@@ -457,6 +465,10 @@ ldap:
   enableLDAPS: <true/false>
   ldapsCertificateLocation: 'certificate.pem'
 ```
+
+#### External OpenID Connect Configuration
+
+Read instructions [here](AMC_OIDC_Configuration_Guide.md) on how to configure an external OIDC Provider as an authentication provider.
 
 #### Virtual Root Configuration
 If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path on the configuration.
@@ -597,6 +609,7 @@ images:
     registry: <registry where the docker image is>
     repository: ibm/mobile-capture-static-file-server
 existingSecret: mobilecapture
+authentication: internal
 seed:
   adminUser:
     username: 'admin@ibm.com'
@@ -653,6 +666,7 @@ If LDAPS is active, this field should contain the LDAP over SSL server’s publi
 
 
 ```yaml
+authentication: internal
 ldap:
   host: <ldap host>
   port: <ldap port>
@@ -663,6 +677,10 @@ ldap:
   enableLDAPS: <true/false>
   ldapsCertificateLocation: 'certificate.pem'
 ```
+
+#### External OpenID Connect Configuration
+
+Read instructions [here](AMC_OIDC_Configuration_Guide.md) on how to configure an external OIDC Provider as an authentication provider.
 
 #### Virtual Root Configuration
 If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path on the configuration.
@@ -810,6 +828,7 @@ images:
     registry: <registry where the docker image is>
     repository: ibm/mobile-capture-static-file-server
 existingSecret: mobilecapture
+authentication: internal
 seed:
   adminUser:
     username: 'admin@ibm.com'
@@ -866,6 +885,7 @@ Under `ldap` set the values for:
 If LDAPS is active, this field should contain the LDAP over SSL server’s public certificate in PEM format (.pem), the path is relative to the helm chart’s root directory. It validates the server's authenticity against this certificate. It can be a CA root certificate, or a self-signed certificate. If you save the public certificate named as `ldaps_cert.pem` and copy it to the same directory as the helm chart, the content of `ldapsCertificateLocation`  should be `ldaps_cert.pem`.
 
 ```yaml
+authentication: internal
 ldap:
   host: <ldap host>
   port: <ldap port>
@@ -876,6 +896,10 @@ ldap:
   enableLDAPS: <true/false>
   ldapsCertificateLocation: 'certificate.pem'
 ```
+
+#### External OpenID Connect Configuration
+
+Read instructions [here](AMC_OIDC_Configuration_Guide.md) on how to configure an external OIDC Provider as an authentication provider.
 
 #### Virtual Root Configuration
 If traffic into the cluster is rooted by an external proxy employing a URL rewrite strategy, effectively creating a virtual root, you need to define the virtual root's path on the configuration.
