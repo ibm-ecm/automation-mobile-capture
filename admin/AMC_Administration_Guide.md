@@ -306,7 +306,7 @@ To create a connection to a specific IBM Navigator desktop, specify the desired 
 
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
-OBS: The ertificate file needs to be in .pem format
+OBS: The certificate file needs to be in .pem format
 OBS: All properties uploaded to FileNet need to be configured as strings.
 
 
