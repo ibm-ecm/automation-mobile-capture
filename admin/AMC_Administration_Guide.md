@@ -1,11 +1,11 @@
 # <u>Overview</u>
 
 
-IBM Automation Mobile Capture mobile app that helps you to scan and capture data from a variety of documents. You also can edit, and upload the data in a repository of your choice in few seconds.
+IBM Automation Mobile Capture is a platform that helps you scan and capture data from a variety of documents. By using your mobile device, you can capture, edit, and upload the data in a repository of your choice in few seconds.
 
 ## Capabilities of IBM Automation Mobile Capture
 
-- `Photo Capturing` - A mobile device camera that allows you to take pictures.
+- `Photo Capturing` - A feature consisting of an easy-to-use camera screen which allows you to take pictures.
 
 - `US Driver's Licence scanning and data extraction` - This feature helps you to scan the front and back of a driver's license, which is issued by the US Department of Motor Vehicles, and capture a variety of properties. The document must be compliant with AAMVA DL/ID 2006 specification.
 
@@ -15,13 +15,13 @@ IBM Automation Mobile Capture mobile app that helps you to scan and capture data
 
 - `Property editor` - This feature allows you to visualize, edit, and add data to any available Scenario properties.
 
-- `Offline functionality` - By using feature, you can use all major features of the mobile apps, except the upload functionality in offline status.
+- `Offline functionality` - By using this feature, you can use all major features of the mobile apps, except the upload functionality in offline status.
 
 - `Smart capturing` - This feature consists of a set of functionalities that are designed to help you obtain the best possible image capture and data extraction.
 
 - `Import from device` -  This feature allows you to perform data extraction processes on images and PDF documents that are imported locally from a mobile device.
 
-- `Smart filters` - This is an easy-to-use feature that grants you the ability to apply various filters to their captured images in order to improve image quality and OCR recognition.
+- `Smart filters` - This is an easy-to-use feature that grants you the ability to apply various filters to captured images in order to improve image quality and OCR recognition.
 
 - `Data Provider` - This feature is meant to help you to complete the extracted data from documents with additional data downloaded from an external service. 
 
@@ -82,7 +82,7 @@ A scenario represents an assembly of steps, manually added together, to facilita
 
 ## Creating a scenario
 
-After you logged in into the Admin Console, access the scenarios page by clicking **Scenarios** on the toolbar, this must be your default page when logged in. Do the following steps:
+After you logged into the Admin Console, access the scenarios page by clicking **Scenarios** on the toolbar, this will be your default page when logged in. Do the following steps:
 
 1.	Click **New Scenario** 
 2.	Insert a given scenario name
@@ -220,7 +220,7 @@ This scenario element shows a history of every upload. You can see at a glance: 
 1.	Enter a given scenario
 2.	Click **Uploads**
 
-OBS: If the Upload Step is configured for uploading into an external repository (in Datacap or IBM Navigator), the content of each upload can be accessible only inside said repository.
+OBS: If the Upload Step is configured for uploading into an external repository (in IBM Datacap or IBM Navigator), the content of each upload can be accessible only inside said repository.
 
 
 # 3. <u>Inviting and managing users</u>
@@ -245,8 +245,8 @@ OBS: Note that you can only invite one user at a time.
 Do the following steps to remove a user
 
 1. From the Team page, Click **Manage Users**. 
-2. Click **Delete** corresponding to said user
-3. To confirm the action click **OK**
+2. Click the **Delete** button corresponding to said user.
+3. Click **OK** to confirm the action.
 
 
 
@@ -307,7 +307,7 @@ To create a connection to a specific IBM Navigator desktop, specify the desired 
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
 OBS: The certificate file needs to be in .pem format
-OBS: All properties uploaded to IBM FileNet that need to be configured as strings.
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
 
 
 ## Content Services Integration
@@ -328,7 +328,7 @@ To create a connection to a specific IBM Navigator on Cloud desktop, specify the
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
 OBS: The certificate file needs to be in .pem format
-OBS: All properties that are uploaded to IBM FileNet that need to be configured as strings.
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
 
 ## Datacap integration
 

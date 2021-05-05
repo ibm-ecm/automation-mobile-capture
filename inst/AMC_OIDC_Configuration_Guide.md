@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes about the requirements and provides the general instruction for setting up IBM Automation Mobile Capture (AMC) with an _OpenID Connect_ (_OIDC_) _Identity Provider_ (_IdP_).
+This document describes the requirements and general instruction for setting up IBM Automation Mobile Capture (AMC) with an _OpenID Connect_ (_OIDC_) _Identity Provider_ (_IdP_).
 
 
 ## Requirements
