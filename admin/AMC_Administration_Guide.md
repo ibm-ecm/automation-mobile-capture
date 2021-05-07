@@ -1,32 +1,32 @@
 # <u>Overview</u>
 
 
-IBM Automation Mobile Capture is a platform that helps you to scan and capture data from a variety of documents. By simply using a mobile device, you can capture, edit, and upload the data in a repository of your choice in few seconds.
+IBM Automation Mobile Capture is a platform that helps you scan and capture data from a variety of documents. By using your mobile device, you can capture, edit, and upload the data in a repository of your choice in few seconds.
 
 ## Capabilities of IBM Automation Mobile Capture
 
-- `Photo Capturing` - A feature that presents you with a simple camera screen that allows you to take a picture.
+- `Photo Capturing` - A feature consisting of an easy-to-use camera screen which allows you to take pictures.
 
 - `US Driver's Licence scanning and data extraction` - This feature helps you to scan the front and back of a driver's license, which is issued by the US Department of Motor Vehicles, and capture a variety of properties. The document must be compliant with AAMVA DL/ID 2006 specification.
 
-- `Passport scanning and data extraction` - This feature allows you to scan any government-issued Machine Readable Passport or other TD3 sized Machine Readable Travel Document, using the camera of the device. The document must be fully compliant with Part 4 of ICAO Doc 9303.
+- `Passport scanning and data extraction` - This feature allows you to scan any government-issued Machine Readable Passport or other TD3 sized Machine Readable Travel Document, by using the device camera. The document must be fully compliant with Part 4 of ICAO Doc 9303.
 
 - `Barcode scanning and data extraction` - This feature allows you to scan the following types of barcode: Aztec, Code 39, Code 39 with checksum, full ASCII Code 39, full ASCII Code 39 with checksum, Code 93 Code 93i, Code 128, Data Matrix, EAN-8, EAN-13, Interleaved 2 of 5 (ITF), Interleaved 2 of 5 (ITF) with checksum, ITF-14, PDF417, QR, and UPC-E.
 
-- `Property editor` - This feature allows you to visualize, edit and add data to any available Scenario properties.
+- `Property editor` - This feature allows you to visualize, edit, and add data to any available Scenario properties.
 
 - `Offline functionality` - By using this feature, you can use all major features of the mobile apps, except the upload functionality in offline status.
 
-- `Smart capturing` - This feature consists of a set of functionalities designed to help you obtain the best possible image capture and data extraction.
+- `Smart capturing` - This feature consists of a set of functionalities that are designed to help you obtain the best possible image capture and data extraction.
 
-- `Import from device` -  This feature allows you to perform data extraction processes on images and PDF documents imported locally from a mobile device.
+- `Import from device` -  This feature allows you to perform data extraction processes on images and PDF documents that are imported locally from a mobile device.
 
-- `Smart filters` - This is an easy-to-use feature that grants you the ability to apply a variety of filters to their captured images in order to improve image quality and OCR recognition.
+- `Smart filters` - This is an easy-to-use feature that grants you the ability to apply various filters to captured images in order to improve image quality and OCR recognition.
 
 - `Data Provider` - This feature is meant to help you to complete the extracted data from documents with additional data downloaded from an external service. 
 
 - `Scenario Deep Linking` - This is a function that allows you to open the mobile app in any given scenario.
-- `Smart Data Extraction` -  This feature allows you to extract data automatically from a document using Machine Learning.
+- `Smart Data Extraction` -  This feature allows you to extract data automatically from a document by using Machine Learning.
 - `Signature Confirmation` -  This feature allows you to mark a page in a document as it is signed or not. 
 - `Multiple-Page Document Scanning` - Using this feature, you can scan a multiple-page document within the same step. 
 - `Liveness Verification` - This is a feature that offers you the possibility of verifying an app user's identity by using active liveness detection.
@@ -58,9 +58,9 @@ The Admin Console represents a Web browser-based, graphical user interface appli
 
 To begin using the Admin Console, start one of the supported Web browsers in your local environment and access the URL provided to you at the moment of your IBM Mobile Capture user registration. Do the following steps:
 
-1.	Click the **Connect** button
+1.	Click **Connect**
 2.	Insert the correct credentials in the **Username** and **Password** fields
-3. Click the **Login** button
+3. 	Click **Login**
 
 You can use the **Remember me** checkbox for easier access in case of repeated workspace use.
 
@@ -82,7 +82,7 @@ A scenario represents an assembly of steps, manually added together, to facilita
 
 ## Creating a scenario
 
-After you logged in into the Admin Console, access the scenarios page by clicking **Scenarios** on the toolbar, this should be your default page when logged in. Do the following steps:
+After you logged into the Admin Console, access the scenarios page by clicking **Scenarios** on the toolbar, this will be your default page when logged in. Do the following steps:
 
 1.	Click **New Scenario** 
 2.	Insert a given scenario name
@@ -103,7 +103,7 @@ The name of a scenario can be set when creating the particular scenario or by ed
 
 #### Scenario deep linking 
 
-A link situated under the Scenario name, which is copied and accessed from a mobile device with the IBM Automation Mobile Capture app installed,  that opens the app at the beginning of the scenario.
+A link situated under the Scenario name, which is copied and accessed from a mobile device with the IBM Automation Mobile Capture app installed that opens the app at the beginning of the scenario.
 
 #### Scenario steps
 
@@ -184,7 +184,7 @@ OBS: This step has no editing options.
 
 1.	Click  **Edit** 
 2.	Write the text message you want app users to see and read out loud while recording the video.
-3. Click **Save**
+3. 	Click **Save**
 
 
 OBS: The text message has a limit of 150 characters.
@@ -192,10 +192,10 @@ OBS: The text message has a limit of 150 characters.
 10) `Receipt Capture:` This feature allows you to scan and capture and extract information such as Merchant Name, Date, and Total Amount from a receipt. To do so, do the following steps:
 
 1.	Click  **Edit** 
-2. Check or Uncheck the **Allow user to import from device** box, in case of wanting to import the receipt from the mobile device's storage.
-3. Check or Uncheck the **Merchant name** box, in case of wanting to extract the Merchant name.
-4. Check or Uncheck the **Receipt date** box, in case of wanting to extract the Date.
-5. heck or Uncheck the **Receipt total amount** box, in case of wanting to extract the total amount.
+2. 	Check or Uncheck the **Allow user to import from device** box, in case of wanting to import the receipt from the mobile device's storage.
+3. 	Check or Uncheck the **Merchant name** box, in case of wanting to extract the Merchant name.
+4. 	Check or Uncheck the **Receipt date** box, in case of wanting to extract the Date.
+5. 	Check or Uncheck the **Receipt total amount** box, in case of wanting to extract the total amount.
 
 
 
@@ -220,7 +220,7 @@ This scenario element shows a history of every upload. You can see at a glance: 
 1.	Enter a given scenario
 2.	Click **Uploads**
 
-OBS: If the Upload Step is configured for uploading into an external repository (in DataCap or IBM navigator), the content of each upload can be accessible only inside said repository.
+OBS: If the Upload Step is configured for uploading into an external repository (in IBM Datacap or IBM Navigator), the content of each upload can be accessible only inside said repository.
 
 
 # 3. <u>Inviting and managing users</u>
@@ -234,9 +234,9 @@ To invite and manage users, do the following steps:
 Do the following steps to invite users
 
 1.	From the Team page, Click **Manage Users**. 
-2. Click **Invite User**.
+2. 	Click **Invite User**.
 3.	Insert the email address of the person that you would like to invite using the following format [_user@example.com_](mailto:user@example.com)_._ 
-4. Click **Send**. 
+4. 	Click **Send**. 
 
 OBS: Note that you can only invite one user at a time.
 
@@ -245,8 +245,8 @@ OBS: Note that you can only invite one user at a time.
 Do the following steps to remove a user
 
 1. From the Team page, Click **Manage Users**. 
-2. Click the **Delete** button corresponding to said user
-3. Confirm the action clicking **OK**
+2. Click the **Delete** button corresponding to said user.
+3. Click **OK** to confirm the action.
 
 
 
@@ -263,9 +263,9 @@ To assign a role to a user that has not accessed the platform:
 3. Select a new user role from the dropdown menu
 4. Click **Save**
 
-To modify a role to a active user of the platform:
+To modify a role to an active user of the platform:
 
-1. Access the Team page, here you will see all users who accessed the platform.
+1. Access the Team page, here you can see all users who accessed the platform.
 2. Click on the current role of a user and select a new one from the drop-down list.
 
 To remove the role of an user, simply click the corresponding **Delete** button 
@@ -288,9 +288,9 @@ OBS: When connected to an LDAP server, only the App User and Workspace Admin rol
 
 IBM Automation Mobile Capture offers integrations with the following file and data governance products.
 
-## FileNet Integration
+## IBM FileNet Integration
 
-FileNet is a powerful enterprise content management system. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+IBM FileNet is a powerful enterprise content management system. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
 
 Do the following steps to set up an IBM® Content Navigator (with FileNet) integration:
 
@@ -307,7 +307,7 @@ To create a connection to a specific IBM Navigator desktop, specify the desired 
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
 OBS: The certificate file needs to be in .pem format
-OBS: All properties uploaded to FileNet need to be configured as strings.
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
 
 
 ## Content Services Integration
@@ -320,19 +320,19 @@ Do the following steps to set up an IBM® Content Navigator integration:
 2.	Go to **New Connection** and select **Content Services**
 3.	Insert a Connection name and the credentials associated with your repository
 4.	Click **Connect to Navigator** 
-5. Attach a certificate file, if required
+5. 	Attach a certificate file, if required
 6.	Select the repository where you want the data and images to be allocated
 7.	Click  **Save** 
 
 To create a connection to a specific IBM Navigator on Cloud desktop, specify the desired desktop in the Navigator URL using the following format `/navigator/?desktop=desktopname`
 
 OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
-OBS: The ertificate file needs to be in .pem format
-OBS: All properties uploaded to FileNet need to be configured as strings.
+OBS: The certificate file needs to be in .pem format
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
 
 ## Datacap integration
 
-Datacap is a complete solution for data and documents, which helps you to streamline the capture, recognition, and classification of business documents and extract important information.
+IBM Datacap is a complete solution for data and documents, which helps you to streamline the capture, recognition, and classification of business documents and extract important information.
 
 Do the following steps to set up an IBM® Datacap integration:
 
