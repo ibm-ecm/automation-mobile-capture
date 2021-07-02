@@ -31,7 +31,7 @@ IBM Automation Mobile Capture is a platform that helps you scan and capture data
 - `Multiple-Page Document Scanning` - Using this feature, you can scan a multiple-page document within the same step. 
 - `Liveness Verification` - This is a feature that offers you the possibility of verifying an app user's identity by using active liveness detection.
 - `Receipt Capture` - This feature allows you to scan, capture, and extract different information from a receipt. 
-
+- `Video recording` - This feature offers you the ability to record and upload a video.
 
 
 
@@ -197,14 +197,20 @@ OBS: The text message has a limit of 150 characters.
 4. 	Check or Uncheck the **Receipt date** box, in case of wanting to extract the Date.
 5. 	Check or Uncheck the **Receipt total amount** box, in case of wanting to extract the total amount.
 
+11) `Video:` This step allows mobile users to record a video without a specific time limit as well as import a video of their choice from the deices storage. To do so, do the following steps:
+
+1.	Click  **Edit** 
+2.	Check or Uncheck the **Allow user to import from device** box
+3. 	Click **Save**
+
 
 
 11)  `Upload:` This is a mandatory step, which allows you to select an additional repository for uploading the extracted data and images of a given scenario. To do so, do the following steps:
 
-a.	Click **Edit** 
-b.	Select any available Connection from the drop-down list
-c.	Configure the selected Connection
-d.	Specify the Properties data (if necessary)
+1.	Click **Edit** 
+2.	Select any available Connection from the drop-down list
+3.	Configure the selected Connection
+4.	Specify the Properties data (if necessary)
 
 ##### Properties
 
@@ -309,10 +315,55 @@ OBS: The uploaded images in the IBM® Content Navigator can be available as a si
 OBS: The certificate file needs to be in .pem format
 OBS: All properties uploaded to IBM FileNet must be configured as strings.
 
+## IBM FileNet Direct Integration
+
+IBM FileNet is a powerful enterprise content management system. Connected to IBM  Navigator it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+
+This connection allows you to upload the your content from the mobile apps direclty to an IBM FileNet repository.
+
+Do the following steps to set up an IBM® Content Navigator (with FileNet) integration:
+
+1.	Click **Connections** on the toolbar
+2.	Go to **New Connection** and select **FileNet**
+3.	Insert a Connection name and the credentials associated with your repository
+4.	Click **Connect to Navigator** 
+5. Attach a certificate file, if required
+6.	Select the repository where you want the data and images to be allocated
+7.	Click  **Save** 
+
+To create a connection to a specific IBM Navigator desktop, specify the desired desktop in the Navigator URL using the following format `/navigator/?desktop=desktopname`
+
+
+OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
+OBS: The certificate file needs to be in .pem format
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
+
 
 ## Content Services Integration
 
 Content Services are an easy-to-use web client for content management. Connected to IBM Navigator on Cloud it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+
+Do the following steps to set up an IBM® Content Navigator integration:
+
+1.	Click **Connections** on the toolbar
+2.	Go to **New Connection** and select **Content Services**
+3.	Insert a Connection name and the credentials associated with your repository
+4.	Click **Connect to Navigator** 
+5. 	Attach a certificate file, if required
+6.	Select the repository where you want the data and images to be allocated
+7.	Click  **Save** 
+
+To create a connection to a specific IBM Navigator on Cloud desktop, specify the desired desktop in the Navigator URL using the following format `/navigator/?desktop=desktopname`
+
+OBS: The uploaded images in the IBM® Content Navigator can be available as a single PDF format file.
+OBS: The certificate file needs to be in .pem format
+OBS: All properties uploaded to IBM FileNet must be configured as strings.
+
+## Content Services Direct Integration
+
+Content Services are an easy-to-use web client for content management. Connected to IBM Navigator on Cloud it provides users with a web console for working with content that is stored on IBM Content Manager, IBM Content Manager OnDemand, or IBM FileNet® Content Manager repositories.
+
+This connection allows you to upload the your content from the mobile apps direclty to an Content Services repository.
 
 Do the following steps to set up an IBM® Content Navigator integration:
 
